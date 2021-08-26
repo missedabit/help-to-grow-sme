@@ -1,0 +1,61 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Director's DoB
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="companies-house-number">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is the company director's date of birth?
+            </h1>
+          </legend>
+          <p class="govuk-body">This information is a further security check...</p>
+
+          <div class="govuk-date-input" id="directors-dob">
+            <label class="govuk-label" for="directors-dob">
+              Director's date of birth
+            </label>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="directors-dob-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="directors-dob-day" name="directors-dob-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="directors-dob-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="directors-dob-month" name="directors-dob-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="directors-dob-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="directors-dob-year" name="directors-dob-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+        </fieldset>
+
+      </div>
+
+      <form class="form" action="check-company-details" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

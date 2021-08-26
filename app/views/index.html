@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column">
+      <h1 class="govuk-heading-l">
+        SME Prototypes
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p  class="govuk-body">Click on the links below to navigate to the prototype pages</p>
+
+      <h2 class="govuk-heading-m">SME Elligibility & Application</h2>
+
+      <h3 class="govuk-heading-s">Check eligibility</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="sme/check-eligibility/landing-page">Start page</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/select-software">Select software</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/new-to-software">New to software</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/major-upgrade">Major upgrade</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/company-size">Company size</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/companies-house-number">Companies House Number</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/directors-dob">Directors DoB</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/check-company-details">Check company details</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/company-elligible">Company is elligible</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/company-not-elligible">Company is not elligible</a>
+        </li>
+        <li>
+          <a href="sme/check-eligibility/register-interest">Register interest</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Get token (voucher)</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="sme/get-token/authorised-person">Authorised person</a>
+        </li>
+        <li>
+          <a href="sme/get-token/work-email">Work email</a>
+        </li>
+        <li>
+          <a href="sme/get-token/confirm-work-email">Confirm work email</a>
+        </li>
+        <li>
+          <a href="sme/get-token/check-work-email">Check your work email</a>
+        </li>
+        <li>
+          <a href="sme/get-token/terms-and-conditions">T&C's + Privacy consent</a>
+        </li>
+        <li>
+          <a href="sme/get-token/token-issued">Token issued</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  New to software
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="new-to-software">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is your business buying [software name] for the first time?
+            </h1>
+          </legend>
+          <p class="govuk-body">Buying software for the first time means your business have never bought the software before.</p>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="new-to-software-1" name="new-to-software" type="radio" value="Software 1">
+              <label class="govuk-label govuk-radios__label" for="new-to-software-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="new-to-software-2" name="new-to-software" type="radio" value="Software 2">
+              <label class="govuk-label govuk-radios__label" for="new-to-software-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="major-upgrade" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

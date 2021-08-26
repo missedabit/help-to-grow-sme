@@ -1,0 +1,24 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Start page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Help to Grow: Digital</h1>
+      <p class="govuk-body">Intro text here to tell users what all this is about.</p>
+      <h2 class="govuk-heading-m">Check product list</h2>
+      <p class="govuk-body">Check product list before you start. If you need help to select a product then go <a href="#" class="govuk-link">here.</a></p>
+      <form class="form" action="select-software" method="get">
+        <button class="govuk-button" data-module="govuk-button">Start</button>
+      </form>
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+    </div>
+  </div>
+
+{% endblock %}
