@@ -17,7 +17,7 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              How many employees does your business have?
+              Does the business have between 5 and 249 employees?
             </h1>
           </legend>
           <p class="govuk-body">
@@ -25,12 +25,21 @@
 
             Staff means..
           </p>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="no-employees">
-              Number of employees
-            </label>
-            <input class="govuk-input govuk-input--width-3" id="no-employees" name="no-employees" type="text">
-          </div>
+
+          <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+          
         </fieldset>
       </div>
 
