@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="new-to-software">Back</a>
+  <a class="govuk-back-link" href="select-software">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -20,7 +20,9 @@
               Is your business buying [software name] for the first time?
             </h1>
           </legend>
+          <!--
           <p class="govuk-body">Buying software for the first time means your business have never bought the software before.</p>
+          -->
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-to-software-1" name="new-to-software" type="radio" value="Software 1">
@@ -38,7 +40,7 @@
         </fieldset>
       </div>
 
-      <form class="form" action="major-upgrade" method="get">
+      <form class="form" action="company-size" method="get">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
