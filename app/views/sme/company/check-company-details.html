@@ -1,0 +1,92 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Check company details
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="directors-dob">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Check and confirm your company details</h1>
+      <!--
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Company name</th>
+            <td class="govuk-table__cell">Great accounting app</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Company registration number</th>
+            <td class="govuk-table__cell">5679754</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Company registration address</th>
+            <td class="govuk-table__cell">
+              72 Guild Street<br>
+              London<br>
+              SE23 6FH
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      -->
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Great accounting app
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Companies House number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            5679754
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Registered office
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72 Guild Street<br>
+            London<br>
+            SE23 6FH
+          </dd>
+        </div>
+      </dl>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Continue only if this is your company or the company you work for and would like to apply for a Help to Grow: Digital token
+        </strong>
+      </div>
+
+      <p><a href="#" class="govuk-link">This is not my company</a></p>
+
+      <form action="company-elligible" method="get" novalidate>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
