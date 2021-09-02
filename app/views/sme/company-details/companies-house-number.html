@@ -1,0 +1,50 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Companies House number
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="company-size">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is the Companies House number of the busness?
+            </h1>
+          </legend>
+          <p class="govuk-body">This is also known as the company registration number.</p>
+          <p class="govuk-body">We will use your Companies House number to confirm your company details.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="companies-house-number">
+              Companies House number
+            </label>
+            <div class="govuk-hint">For example, SP450735</div>
+            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text">
+          </div>
+        </fieldset>
+        <br>
+        <br>
+        <h2 class="govuk-heading-m govuk-!-margin-top-30">I do not know my Companies House number</h2>
+
+          <p>You can find your Companies House number on your certificate of incorporation.</p>
+          <p>You can also <a href="#" class="govuk-link">search the Companies House register</a> (opens in new tab)</p>
+
+      </div>
+
+      <form class="form" action="directors-dob" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
