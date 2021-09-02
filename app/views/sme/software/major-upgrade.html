@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
   <a class="govuk-back-link" href="new-to-software">Back</a>
 {% endblock %}
 
@@ -20,7 +22,10 @@
               Is your business making a major upgrade from a previous version of [software name]?
             </h1>
           </legend>
+          <!--
           <p class="govuk-body">Major upgrade from a previous version means...</p>
+          -->
+          <br>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="major-upgrade-1" name="major-upgrade" type="radio" value="Software 1">
@@ -38,7 +43,7 @@
         </fieldset>
       </div>
 
-      <form class="form" action="company-size" method="get">
+      <form class="form" action="../company/company-size" method="get">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
