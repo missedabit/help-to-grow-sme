@@ -1,13 +1,13 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  Work email
+  Confirm work email
 {% endblock %}
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="../company/directors-dob">Back</a>
+  <a class="../task-list" href="../task-list">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -20,21 +20,20 @@
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Applicant details</span>
             <h1 class="govuk-fieldset__heading">
-              What is your work email address?
+              What's your role in the business?
             </h1>
           </legend>
-          <p class="govuk-body">We will use this to send your software token.</p>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="email">
-              Work email address
-            </label>
-            <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" value="">
-          </div>
+  <label class="govuk-label" for="full-name">
+    Role
+  </label>
+  <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+
         </fieldset>
       </div>
 
-      <form class="form" action="confirm-work-email" method="get">
+      <form class="form" action="../task-list" method="get">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
