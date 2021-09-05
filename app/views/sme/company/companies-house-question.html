@@ -1,0 +1,64 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you have a Companies House number?
+      </h1>
+    </legend>
+
+    <p>You can find your Companies House number on your certificate of incorporation. You can also <a href="https://find-and-update.company-information.service.gov.uk" class="govuk-link">search the Companies House register</a> (opens in new tab)</p>
+    <!--
+    <div id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </div>
+    -->
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="company-details">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+
+
+
+</div>
+
+<form class="form" action="company-details" method="get">
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+<!--
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+-->
+
+    </div>
+  </div>
+
+{% endblock %}
