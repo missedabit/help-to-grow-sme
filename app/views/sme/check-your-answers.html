@@ -7,7 +7,7 @@
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <a class="govuk-back-link" href="terms-and-conditions">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -145,7 +145,7 @@
 
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="/confirmation" method="post" novalidate>
+      <form action="token-issued" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
