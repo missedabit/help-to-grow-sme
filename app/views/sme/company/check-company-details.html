@@ -15,7 +15,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-l">Company</span>
-      <h1 class="govuk-heading-l">Confirm your company details</h1>
+      <h1 class="govuk-heading-l">Are these company details correct?</h1>
       <!--
       <table class="govuk-table">
         <tbody class="govuk-table__body">
@@ -68,15 +68,42 @@
         </div>
       </dl>
 
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <!--
+    <div id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </div>
+    -->
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          Continue only if this is your company or the company you work for and would like to apply for a Help to Grow: Digital token
+          Only continue if this is your company or the company you work for and would like to apply to the Help to Grow: Digital software scheme.
         </strong>
       </div>
 
+      <!--
       <p><a href="#" class="govuk-link">This is not my company</a></p>
+      -->
 
       <form action="../applicant/name" method="get" novalidate>
         <button type="submit" class="govuk-button" data-module="govuk-button">
@@ -84,6 +111,7 @@
         </button>
 
       </form>
+
 
     </div>
   </div>
