@@ -7,7 +7,7 @@
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="directors-dob">Back</a>
+  <a class="govuk-back-link" href="company-details">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -40,6 +40,7 @@
       -->
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Company name
@@ -47,57 +48,51 @@
           <dd class="govuk-summary-list__value">
             Great accounting app
           </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Companies House number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            5679754
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden">Company number</span>
+            </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Registered office
+          Company House number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12345678
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Registered office
           </dt>
           <dd class="govuk-summary-list__value">
             72 Guild Street<br>
             London<br>
             SE23 6FH
           </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="directors-dob">
+
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
         </div>
+
       </dl>
-
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-    <!--
-    <div id="changed-name-hint" class="govuk-hint">
-      This includes changing your last name or spelling your name differently.
-    </div>
-    -->
-    <div class="govuk-radios govuk-radios--inline">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changed-name">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changed-name-2">
-          No
-        </label>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          Only continue if this is your company or the company you work for and would like to apply to the Help to Grow: Digital software scheme.
+          Only continue if this is your company or the company you work for and you would like to apply to the Help to Grow: Digital business software scheme.
         </strong>
       </div>
 
