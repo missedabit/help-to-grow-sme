@@ -1,0 +1,62 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Start page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Apply to the Help to Grow: Digital business software scheme</h1>
+
+      <p class="govuk-body">From December 2021 your business could get up to 50% off the cost of approved CRM, Accounting and eCommerce software, worth up to £5,000.</p>
+
+      <p class="govuk-body">To be eligible for the scheme, your business must:</p>
+      <ul class="govuk-list govuk-list--bullet">
+      <li>be registered in the UK at Companies House or with the Financial Conduct Authority (FCA)</li>
+      <li>have been trading for more than 12 months</li>
+      <li>employ between 5 and 249 people</li>
+      <!--
+      <li>be buying the software for the first time or upgrading business software</li>
+      -->
+      </ul>
+
+
+
+      <br>
+
+      <form class="form" action="software/select-software" method="get">
+        <button class="govuk-button" data-module="govuk-button">Start now</button>
+      </form>
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+       <!--<div class="govuk-inset-text">-->
+      <p class="govuk-body">The person applying to the scheme should be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>aged 18 or over</li>
+        <li>the company director or an employee of the business</li>
+        </ul>
+        <!--
+      <p class="govuk-body">'Approved person' means......</p>
+      -->
+      <!--</div>-->
+
+        <p class="govuk-body">You'll need to tell us:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>the Companies House number or FCA number</li>
+          <li>the number of employees in the business</li>
+          <li>the company director's name and date of birth</li>
+          <li>your name, position in the company and work email address</li>
+          </ul>
+      </div>
+      <!--
+      <p class="govuk-body">You will need to take a look at approved software before you start.<a href="#" class="govuk-link">here.</a></p>
+      -->
+    </div>
+    
+
+  </div>
+
+{% endblock %}

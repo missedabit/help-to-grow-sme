@@ -1,0 +1,44 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Work email
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="role">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Applicant</span>
+            <h1 class="govuk-fieldset__heading">
+              What is your work email address?
+            </h1>
+          </legend>
+          <p class="govuk-body">We will use this to confirm who you are and send your Help to Grow software discount link.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Work email address
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" value="">
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="check-your-answers" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

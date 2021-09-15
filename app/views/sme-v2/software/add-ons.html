@@ -1,0 +1,54 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Major upgrade
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="major-upgrade">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Software</span>
+            <h1 class="govuk-fieldset__heading">
+              Is this an add on to Thyme management software?
+            </h1>
+          </legend>
+          <!--
+          <p class="govuk-body">Major upgrade from a previous version means...</p>
+          -->
+          <br>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="major-upgrade-1" name="major-upgrade" type="radio" value="Software 1">
+              <label class="govuk-label govuk-radios__label" for="major-upgrade-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="major-upgrade-2" name="major-upgrade" type="radio" value="Software 2">
+              <label class="govuk-label govuk-radios__label" for="major-upgrade-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="../company/companies-house-question" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

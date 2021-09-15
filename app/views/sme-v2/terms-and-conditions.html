@@ -1,0 +1,54 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Terms and conditions and Privacy Consent
+{% endblock %}
+
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="applicant/check-your-answers">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">Applicant</span>
+      <h1 class="govuk-heading-l">Terms and conditions and privacy policy</h1>
+
+      <p class="govuk-body">Before you get your Help to Grow software discount for Thyme management, you will need to read and accept the <a href="#" class="govuk-link">terms and conditions</a> and agree to the <a href="#" class="govuk-link">privacy policy</a>.<p>
+
+      <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="tcaccept" name="tcaccept" type="checkbox">
+              <label class="govuk-label govuk-checkboxes__label" for="tcaccept">
+                I accept the terms and conditions
+              </label>
+            </div>
+          </div>
+      </div>
+
+      <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="consentaccept" name="consentaccept" type="checkbox">
+              <label class="govuk-label govuk-checkboxes__label" for="consentaccept">
+                I agree to the privacy policy
+              </label>
+            </div>
+          </div>
+      </div>
+
+      <form action="applicant/check-work-email" method="get" novalidate>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

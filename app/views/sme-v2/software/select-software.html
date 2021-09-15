@@ -1,0 +1,100 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Product list
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="../start-page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Software</span>
+            <h1 class="govuk-fieldset__heading">
+              Which software product would you like to buy?
+            </h1>
+          </legend>
+          <!--
+          <p id="govuk-body">Software list</p>
+          -->
+          <br>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-1" name="select-software" type="radio" value="Software 1">
+              <label class="govuk-label govuk-radios__label" for="select-software-1">
+                Thyme management software
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-2" name="select-software" type="radio" value="Software 2">
+              <label class="govuk-label govuk-radios__label" for="select-software-2">
+                Sparsley sourcing software
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-3" name="select-software" type="radio" value="Software 3">
+              <label class="govuk-label govuk-radios__label" for="select-software-3">
+                Dillivery booking software
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-3" name="select-software" type="radio" value="Software 3">
+              <label class="govuk-label govuk-radios__label" for="select-software-3">
+                Loyal Mint accountancy software
+              </label>
+            </div>
+            <!--
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-4" name="select-software" type="radio" value="Software 4">
+              <label class="govuk-label govuk-radios__label" for="select-software-4">
+                [Software name 4 goes here]
+              </label>
+            </div>
+            -->
+            <!--
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-5" name="select-software" type="radio" value="Software 5">
+              <label class="govuk-label govuk-radios__label" for="select-software-5">
+                [Software name 5 goes here]
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-6" name="select-software" type="radio" value="Software 6">
+              <label class="govuk-label govuk-radios__label" for="select-software-6">
+                [Software name 6 goes here]
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-7" name="select-software" type="radio" value="Software 7">
+              <label class="govuk-label govuk-radios__label" for="select-software-7">
+                [Software name 7 goes here]
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-8" name="select-software" type="radio" value="Software 8">
+              <label class="govuk-label govuk-radios__label" for="select-software-8">
+                [Software name 8 goes here]
+              </label>
+            </div>
+            -->
+          </div>
+        </fieldset>
+      </div>
+
+      <form class="form" action="new-to-software" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Company size
+{% endblock %}
+
+{% block beforeContent %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
+  <a class="govuk-back-link" href="check-company-details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <!--
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Does the business employ between 5 and 249 people?
+            </h1>
+          </legend>
+          -->
+
+            <div class="govuk-form-group">
+                  <span class="govuk-caption-l">Company</span>
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="weight">
+      How many employees does the business have?
+    </label>
+  </h1>
+  <p class="govuk-body">
+      To be eligible for the scheme the business must employ between 5 and 249 people.
+    </p>
+
+
+
+    <br>
+    <label class="govuk-label" for="number-of-employees">
+      Number of employees
+    </label>
+  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+
+
+  </div>
+</div>
+<!--
+          <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+      -->
+        </fieldset>
+      </div>
+
+      <form class="form" action="directors-dob" method="get">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
