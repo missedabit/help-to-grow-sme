@@ -11,10 +11,10 @@ router.post('/new-software-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (newToSoftware  == "Yes"){
     // Send user to next page
-    res.redirect('major-upgrade')
+    res.redirect('sme-v2/company/companies-house-question')
   } else {
     // Send user to ineligible page
-    res.redirect('ineligible')
+    res.redirect('sme-v2/software/major-upgrade')
   }
 })
 
