@@ -16,8 +16,8 @@
     <div class="govuk-grid-column-two-thirds">
           <form class="form" action="/new-software-answer" method="post">
 
-      <div class="govuk-form-group govuk-form-group--error">
-        <fieldset class="govuk-fieldset aria-describedby="new-to-software-error>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset aria-describedby="">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Software</span>
             <h1 class="govuk-fieldset__heading">
@@ -27,9 +27,11 @@
           <!--
           <p class="govuk-body">Buying software for the first time means your business have never bought the software before.</p>
           -->
+          <!--
           <span id="where-do-you-live-error" class="govuk-error-message">
      <span class="govuk-visually-hidden">Error:</span> Select yes if you are buying the software for the first time
    </span>
+          -->
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-to-software" name="new-to-software" type="radio" value="Yes" {{ checked("new-to-software", "yes") }}>
