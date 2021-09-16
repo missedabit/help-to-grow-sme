@@ -14,7 +14,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      <form class="form" action="check-your-answers" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -29,12 +29,12 @@
             <label class="govuk-label" for="email">
               Work email address
             </label>
-            <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" value="">
+            <input class="govuk-input govuk-!-width-three-quarters" id="work-email" name="work-email" type="text" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
           </div>
         </fieldset>
       </div>
 
-      <form class="form" action="check-your-answers" method="get">
+
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 

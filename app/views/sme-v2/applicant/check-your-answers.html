@@ -13,7 +13,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <span class="govuk-caption-l">Applicant</span>
+      <span class="govuk-caption-l"></span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
       <!--
@@ -22,15 +22,29 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Name
+            Number of employees
           </dt>
           <dd class="govuk-summary-list__value">
-            Sam Upton
+            {{ data['company-size'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="name">
               Change
-              <span class="govuk-visually-hidden">Company number</span>
+              <span class="govuk-visually-hidden"> Name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['full-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="name">
+              Change
+              <span class="govuk-visually-hidden"> Name</span>
             </a>
           </dd>
         </div>
@@ -39,12 +53,12 @@
           Role
           </dt>
           <dd class="govuk-summary-list__value">
-            Administrator
+            {{ data['role'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="role">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> Role</span>
             </a>
           </dd>
         </div>
@@ -53,12 +67,12 @@
           Work email address
           </dt>
           <dd class="govuk-summary-list__value">
-          sam.upton@email.com
+          {{ data['work-email'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="work-email">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> Work email address</span>
             </a>
           </dd>
         </div>

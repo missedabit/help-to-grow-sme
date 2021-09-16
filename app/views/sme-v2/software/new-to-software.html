@@ -16,27 +16,30 @@
     <div class="govuk-grid-column-two-thirds">
           <form class="form" action="/new-software-answer" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group govuk-form-group--error">
+        <fieldset class="govuk-fieldset aria-describedby="new-to-software-error>
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Software</span>
             <h1 class="govuk-fieldset__heading">
-              Are you buying Thyme management software for the first time?
+              Are you buying {{ data['select-software'] }} for the first time?
             </h1>
           </legend>
           <!--
           <p class="govuk-body">Buying software for the first time means your business have never bought the software before.</p>
           -->
+          <span id="where-do-you-live-error" class="govuk-error-message">
+     <span class="govuk-visually-hidden">Error:</span> Select yes if you are buying the software for the first time
+   </span>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="new-to-software" name="new-to-software" type="radio" value="Yes">
+              <input class="govuk-radios__input" id="new-to-software" name="new-to-software" type="radio" value="Yes" {{ checked("new-to-software", "yes") }}>
               <label class="govuk-label govuk-radios__label" for="new-to-software">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-to-software-2" name="new-to-software" type="radio" value="No">
-              <label class="govuk-label govuk-radios__label" for="new-to-software">
+              <label class="govuk-label govuk-radios__label" for="new-to-software-2">
                 No
               </label>
             </div>
