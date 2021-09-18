@@ -46,7 +46,23 @@ router.post('/add-on-answer', function (req, res) {
     res.redirect('sme-v2/company/companies-house-question')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/ineligible')
+    res.redirect('sme-v2/software/confirmation')
+  }
+})
+
+// Add your routes here - above the module.exports line
+router.post('/companies-house-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isCompaniesHouse = req.session.data['company-number']
+
+  // Check whether the variable matches a condition
+  if (isCompaniesHouse  == "Yes"){
+    // Send user to next page
+    res.redirect('sme-v2/company/company-details')
+  } else {
+    // Send user to ineligible page
+    res.redirect('sme-v2/software/confirmation')
   }
 })
 

@@ -14,7 +14,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      <form class="form" action="/companies-house-answer" method="post">
       <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -37,21 +37,21 @@
       <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
         <div class="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in">
+            <input class="govuk-radios__input" id="company-number" name="company-number" type="radio" value="Yes" aria-describedby="sign-in-item-hint">
+            <label class="govuk-label govuk-radios__label" for="company-number">
               Yes – I have a Companies House number
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            <input class="govuk-radios__input" id="company-number-2" name="company-number" type="radio" value="No - I have a Financial Conduct Authority number" aria-describedby="sign-in-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="company-number-2">
               No - I have a Financial Conduct Authority number
             </label>
 
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-            <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            <input class="govuk-radios__input" id="company-number-3" name="company-number" type="radio" value="No - I do not have a Companies House number or a Financial Conduct Authority number" aria-describedby="sign-in-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="company-number-3">
               No - I do not have a Companies House number or a Financial Conduct Authority number
             </label>
 
@@ -69,7 +69,7 @@
 
 </div>
 
-<form class="form" action="company-details" method="get">
+
   <button class="govuk-button" data-module="govuk-button">Continue</button>
 </form>
 
