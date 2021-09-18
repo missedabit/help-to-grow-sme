@@ -59,7 +59,10 @@ router.post('/companies-house-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isCompaniesHouse  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/company-details')
+    res.redirect('sme-v2/company/companies-house-number')
+  } else if (isCompaniesHouse  == "No FCA"){
+      // Send user to next page
+      res.redirect('sme-v2/company/financial-conduct-authority-number')
   } else {
     // Send user to ineligible page
     res.redirect('sme-v2/software/confirmation')
