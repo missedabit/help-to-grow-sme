@@ -78,7 +78,7 @@ router.post('/select-software-category-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isSoftwareCategory  == "CRM"){
     // Send user to next page
-    res.redirect('sme-v2/software/select-CRM-software')
+    res.redirect('sme-v2/software/select-crm-software')
   } else if (isSoftwareCategory  == "Accounting"){
       // Send user to next page
       res.redirect('sme-v2/software/select-accountancy-software')
