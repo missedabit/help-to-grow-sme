@@ -69,5 +69,25 @@ router.post('/companies-house-answer', function (req, res) {
   }
 })
 
+// Add your routes here - above the module.exports line
+router.post('/select-software-category-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isSoftwareCategory = req.session.data['select-software-category']
+
+  // Check whether the variable matches a condition
+  if (isSoftwareCategory  == "CRM"){
+    // Send user to next page
+    res.redirect('sme-v2/software/select-CRM-software')
+  } else if (isSoftwareCategory  == "Accounting"){
+      // Send user to next page
+      res.redirect('sme-v2/software/select-accountancy-software')
+  } else {
+    // Send user to ineligible page
+    res.redirect('sme-v2/software/select-ecommerce-software')
+  }
+})
+
+
 
 module.exports = router

@@ -7,7 +7,7 @@
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="../start-page">Back</a>
+  <a class="govuk-back-link" href="select-software-category">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,13 +15,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="/select-software-category-answer" method="post">
+        <form class="form" action="new-to-software" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Software</span>
             <h1 class="govuk-fieldset__heading">
-              What type of business software are you interested in?
+              Which eCommerce software product would you like to buy?
             </h1>
           </legend>
           <!--
@@ -30,24 +30,29 @@
           <br>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="select-software-category" name="select-software-category" type="radio" value="CRM">
-              <label class="govuk-label govuk-radios__label" for="select-software-category">
-                CRM
+              <input class="govuk-radios__input" id="select-software" name="select-software" type="radio" value="Thyme management software">
+              <label class="govuk-label govuk-radios__label" for="select-software">
+                Thyme management software
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="select-software-category-2" name="select-software-category" type="radio" value="Accounting">
-              <label class="govuk-label govuk-radios__label" for="select-software-category-2">
-                Accountancy
+              <input class="govuk-radios__input" id="select-software-2" name="select-software" type="radio" value="Sparsley sourcing software">
+              <label class="govuk-label govuk-radios__label" for="select-software-2">
+                Sparsley sourcing software
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="select-software-category-3" name="select-software-category" type="radio" value="eCommerce">
-              <label class="govuk-label govuk-radios__label" for="select-software-category-3">
-                eCommerce
+              <input class="govuk-radios__input" id="select-software-3" name="select-software" type="radio" value="Dillivery booking software">
+              <label class="govuk-label govuk-radios__label" for="select-software-3">
+                Dillivery booking software
               </label>
             </div>
-
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="select-software-4" name="select-software" type="radio" value="Loyal Mint accountancy software">
+              <label class="govuk-label govuk-radios__label" for="select-software-4">
+                Loyal Mint accountancy software
+              </label>
+            </div>
             <!--
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="select-software-4" name="select-software" type="radio" value="Software 4">
