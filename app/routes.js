@@ -88,6 +88,21 @@ router.post('/select-software-category-answer', function (req, res) {
   }
 })
 
+// Add your routes here - above the module.exports line
+router.post('/company-size-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isCompanySize = req.session.data['company-size']
+
+  // Check whether the variable matches a condition
+  if (isCompanySize  == "yes"){
+    // Send user to next page
+    res.redirect('sme-v2/company/check-company-details')
+  } else {
+    // Send user to ineligible page
+    res.redirect('sme-v2/company/ineligible')
+  }
+})
 
 
 module.exports = router
