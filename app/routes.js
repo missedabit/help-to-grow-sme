@@ -11,7 +11,7 @@ router.post('/new-software-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (newToSoftware  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/companies-house-question')
+    res.redirect('sme-v2/company/company-size')
   } else {
     // Send user to ineligible page
     res.redirect('sme-v2/software/major-upgrade')
@@ -27,7 +27,7 @@ router.post('/major-upgrade-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isMajorUpgrade  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/companies-house-question')
+    res.redirect('sme-v2/company/company-size')
   } else {
     // Send user to ineligible page
     res.redirect('sme-v2/software/add-ons')
@@ -43,7 +43,7 @@ router.post('/add-on-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isAddOn  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/companies-house-question')
+    res.redirect('sme-v2/company/company-size')
   } else {
     // Send user to ineligible page
     res.redirect('sme-v2/software/confirmation')
