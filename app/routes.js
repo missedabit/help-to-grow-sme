@@ -97,7 +97,7 @@ router.post('/company-size-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isCompanySize  == "yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/check-company-details')
+    res.redirect('sme-v2/company/companies-house-question')
   } else {
     // Send user to ineligible page
     res.redirect('sme-v2/company/ineligible')
