@@ -65,7 +65,7 @@ router.post('/companies-house-answer', function (req, res) {
       res.redirect('sme-v2/company/financial-conduct-authority-number')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/confirmation')
+    res.redirect('sme-v2/company/ineligible')
   }
 })
 
@@ -95,13 +95,14 @@ router.post('/company-size-answer', function (req, res) {
   var isCompanySize = req.session.data['company-size']
 
   // Check whether the variable matches a condition
-  if (isCompanySize  == "yes"){
+  if (isCompanySize  == "no"){
     // Send user to next page
-    res.redirect('sme-v2/company/companies-house-question')
+    res.redirect('sme-v2/company/ineligible')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/company/ineligible')
+    res.redirect('sme-v2/company/companies-house-question')
   }
+
 })
 
 
