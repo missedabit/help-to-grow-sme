@@ -7,13 +7,13 @@
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="../task-list">Back</a>
+  <a class="govuk-back-link" href="javascript:history.go(-1)">Back</a>
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <span class="govuk-caption-l">Software</span>
+      <span class="govuk-caption-l"></span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
       <!--
@@ -22,10 +22,10 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Software product
+            Software type
           </dt>
           <dd class="govuk-summary-list__value">
-            Thyme Management
+            {{ data['select-software-category'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -36,10 +36,24 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Already owned
+            Software product
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{ data['select-software'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden">Company number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          New software
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['new-to-software'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -64,7 +78,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Add ons
+            Add on
           </dt>
           <dd class="govuk-summary-list__value">
             No
@@ -89,7 +103,7 @@
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Confirm
+          Confirm and continue
         </button>
 
       </form>
