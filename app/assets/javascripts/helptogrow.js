@@ -101,5 +101,32 @@ $( document ).ready(function() {
     }
   });
 
+  // form validation for applicant name page
+  $('.applicant-name').on("click", function() {
+    if (!$("input[name='applicant-name']").val()) {
+      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
+
+  // form validation for applicant business role page
+  $('.business-role').on("click", function() {
+    if (!$("input[name='business-role']").val()) {
+      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
+
+  // form validation for applicant work email page
+  $('.work-email').on("click", function() {
+    if (!$("input[name='email']").val()) {
+      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
+
 
 });
