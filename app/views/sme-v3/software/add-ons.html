@@ -12,42 +12,57 @@
 
 {% block content %}
 
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#add-ons">You must select an option from those listed below</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="/add-on-answer" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l"></span>
-            <h1 class="govuk-fieldset__heading">
-              Is this an add on to {{ data['select-software'] }}?
-            </h1>
-          </legend>
-          <!--
-          <p class="govuk-body">Major upgrade from a previous version means...</p>
-          -->
-          <br>
-          <div class="govuk-radios govuk-radios--inline">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="add-on" name="add-on" type="radio" value="Yes">
-              <label class="govuk-label govuk-radios__label" for="major-upgrade">
-                Yes
-              </label>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-l"></span>
+              <h1 class="govuk-fieldset__heading">
+                Is this an add on to {{ data['select-software'] }}?
+              </h1>
+            </legend>
+            <span id="add-ons" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Please select an option.
+            </span>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-on-1" name="add-on" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="add-on-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-on-2" name="add-on" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="add-on-2">
+                  No
+                </label>
+              </div>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="add-on-2" name="add-on" type="radio" value="No">
-              <label class="govuk-label govuk-radios__label" for="add-on-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+          </fieldset>
+        </div>
 
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button add-ons" data-module="govuk-button">Continue</button>
+
       </form>
 
     </div>
