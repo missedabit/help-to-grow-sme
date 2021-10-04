@@ -16,32 +16,14 @@
       <span class="govuk-caption-l"></span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
-      <!--
-      <h2 class="govuk-heading-m">Company details</h2>
-      -->
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <!--
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Number of employees
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['company-size'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="name">
-              Change
-              <span class="govuk-visually-hidden"> Name</span>
-            </a>
-          </dd>
-        </div>
-        -->
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Applicant name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['full-name'] }}
+            {{ data['applicant-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="name">
@@ -55,7 +37,7 @@
           Applicant role
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['role'] }}
+            {{ data['business-role'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="role">
@@ -69,7 +51,7 @@
           Applicant work email address
           </dt>
           <dd class="govuk-summary-list__value">
-          {{ data['work-email'] }}
+          {{ data['email'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="work-email">
@@ -81,9 +63,7 @@
 
 
       </dl>
-      <!--
-      <h2 class="govuk-heading-m">Now send your application</h2>
-      -->
+
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
       <form action="../terms-and-conditions" method="post" novalidate>

@@ -12,29 +12,41 @@
 
 {% block content %}
 
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#applicant-name">Please enter your full name</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      
       <form class="form" action="role" method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l"></span>
-            <h1 class="govuk-fieldset__heading">
-              What is your name?
-            </h1>
-          </legend>
 
-          <div class="govuk-form-group">
-  <label class="govuk-label" for="full-name">
-    Full name
-  </label>
-  <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+        <div class="govuk-form-group">
 
-        </fieldset>
-      </div>
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="applicant-name">
+            What is your name?
+            </label></h1>
+        
+          <div id="applicant-name-hint" class="govuk-hint"> Full name</div>
+          <span style="display:none" id="applicant-name" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Please enter your full name.
+          </span>
+          <input class="govuk-input" id="applicant-name-1" name="applicant-name" type="text" spellcheck="false" autocomplete="name" aria-describedby="applicant-name-hint">
 
+        </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button applicant-name" data-module="govuk-button">Continue</button>
+
       </form>
 
     </div>
