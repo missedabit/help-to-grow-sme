@@ -11,10 +11,10 @@ router.post('/new-software-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (newToSoftware  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/company-size')
+    res.redirect('sme-v3/company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/major-upgrade')
+    res.redirect('sme-v3/software/major-upgrade')
   }
 })
 
@@ -27,10 +27,10 @@ router.post('/major-upgrade-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isMajorUpgrade  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/company-size')
+    res.redirect('sme-v3/company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/add-ons')
+    res.redirect('sme-v3/software/add-ons')
   }
 })
 
@@ -43,10 +43,10 @@ router.post('/add-on-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isAddOn  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/company-size')
+    res.redirect('sme-v3/company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/confirmation')
+    res.redirect('sme-v3/software/confirmation')
   }
 })
 
@@ -59,13 +59,13 @@ router.post('/companies-house-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isCompaniesHouse  == "Yes"){
     // Send user to next page
-    res.redirect('sme-v2/company/companies-house-number')
+    res.redirect('sme-v3/company/companies-house-number')
   } else if (isCompaniesHouse  == "No FCA"){
       // Send user to next page
-      res.redirect('sme-v2/company/financial-conduct-authority-number')
+      res.redirect('sme-v3/company/financial-conduct-authority-number')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/company/ineligible')
+    res.redirect('sme-v3/company/ineligible')
   }
 })
 
@@ -78,13 +78,13 @@ router.post('/select-software-category-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isSoftwareCategory  == "CRM"){
     // Send user to next page
-    res.redirect('sme-v2/software/select-crm-software')
+    res.redirect('sme-v3/software/select-crm-software')
   } else if (isSoftwareCategory  == "Accounting"){
       // Send user to next page
-      res.redirect('sme-v2/software/select-accountancy-software')
+      res.redirect('sme-v3/software/select-accountancy-software')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/software/select-ecommerce-software')
+    res.redirect('sme-v3/software/select-ecommerce-software')
   }
 })
 
@@ -97,10 +97,10 @@ router.post('/company-size-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (isCompanySize  == "no"){
     // Send user to next page
-    res.redirect('sme-v2/company/ineligible')
+    res.redirect('sme-v3/company/ineligible')
   } else {
     // Send user to ineligible page
-    res.redirect('sme-v2/company/companies-house-question')
+    res.redirect('sme-v3/company/companies-house-question')
   }
 
 })
