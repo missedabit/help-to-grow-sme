@@ -14,18 +14,18 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <span class="govuk-caption-l"></span>
+
       <h1 class="govuk-heading-l">Check your email inbox</h1>
       <p class="govuk-body">We have sent an email to: <strong>{{ data['work-email'] }}</strong></p>
       <p class="govuk-body">Follow the link in the email to confirm who you are.</p>
-      <h2 class="govuk-heading-m">I did not receive the email</h2>
-      <p class="govuk-body"><a href="work-email" class="govuk-link">Enter your work email address again</a></p>
-
-      <p class="govuk-body"><a href="work-email" class="govuk-link">Resend the email</a></p>
 
       <form class="form" action="email-verified" method="get">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
+
+      <p class="govuk-body govuk-!-margin-bottom-1"><a class="govuk-link" href="work-email">Enter your work email address again</a></p>
+      <p class="govuk-body govuk-!-margin-bottom-3"><a class="govuk-link" href="work-email">Resend the email</a></p>
+
     </div>
 
 
