@@ -12,7 +12,7 @@
 
 {% block content %}
 
-  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
     <h2 class="govuk-error-summary__title" id="error-summary-title">
       There is a problem
     </h2>
@@ -35,12 +35,11 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-l"></span>
               <h1 class="govuk-fieldset__heading">
                 Are you buying {{ data['select-software'] }} for the first time?
               </h1>
             </legend>
-            <span id="select-software-purchase" class="govuk-error-message">
+            <span style="display:none" id="select-software-purchase" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Please select an option.
             </span>
             <div class="govuk-radios govuk-radios--inline">
