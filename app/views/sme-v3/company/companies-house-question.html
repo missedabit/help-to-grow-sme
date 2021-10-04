@@ -12,7 +12,7 @@
 
 {% block content %}
 
-  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
     <h2 class="govuk-error-summary__title" id="error-summary-title">
       There is a problem
     </h2>
@@ -43,7 +43,7 @@
             <p class="govuk-body">This is also known as a company registration number.</p>
             <p class="govuk-body">You can find the Companies House number on the certificate of incorporation. You can also <a href="https://find-and-update.company-information.service.gov.uk" class="govuk-link" target="_blank">search the Companies House register</a> (opens in new tab).</p>
 
-            <span id="company-house" class="govuk-error-message">
+            <span style="display:none" id="company-house" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Please select an option.
             </span>
 
