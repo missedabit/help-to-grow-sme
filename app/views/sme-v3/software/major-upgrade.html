@@ -20,7 +20,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#major-upgrade">You must select an option from those listed below</a>
+          <a href="#major-upgrade">Select yes if this is a major upgrade from a previous version of {{ data['select-software'] }}</a>
         </li>
       </ul>
     </div>
@@ -40,7 +40,7 @@
                 </h1>
               </legend>
               <span style="display:none" id="major-upgrade" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span>Please select an option.
+                <span class="govuk-visually-hidden">Error:</span>Select yes if this is a major upgrade from a previous version of {{ data['select-software'] }}
               </span>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
