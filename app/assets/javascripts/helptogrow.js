@@ -128,5 +128,15 @@ $( document ).ready(function() {
     }
   });
 
+  // form validation for terms and conditions page
+  $('.terms-policy').submit(function() {
+    if ($('input:checkbox', this).length == $('input:checked', this).length ) {
+            // alert("all checkboxes have been checked");
+    } else {
+          $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+          $(".govuk-error-summary, .govuk-error-message").show();
+          return false;
+    }
+ });
 
 });
