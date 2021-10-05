@@ -19,7 +19,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#select-software-purchase">You must select an option from those listed below</a>
+          <a href="#select-software-purchase">Select yes if you are buying {{ data['select-software'] }} for the first time</a>
         </li>
       </ul>
     </div>
@@ -40,7 +40,7 @@
               </h1>
             </legend>
             <span style="display:none" id="select-software-purchase" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>Please select an option.
+              <span class="govuk-visually-hidden">Error:</span>Select yes if you are buying {{ data['select-software'] }} for the first time
             </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
