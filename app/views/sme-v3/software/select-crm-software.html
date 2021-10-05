@@ -20,7 +20,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#select-crm-software">You must select an option from those listed below</a>
+          <a href="#select-crm-software">Select the {{ data['select-software-category'] }} software you would like to buy</a>
         </li>
       </ul>
     </div>
@@ -40,8 +40,11 @@
                 </h1>
               </legend>
               <span style="display:none" id="select-crm-software" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span>Select the {{ data['select-software-category'] }} software you are interested in.
+                <span class="govuk-visually-hidden">Error:</span>Select the {{ data['select-software-category'] }} software you would like to buy
               </span>
+              <div id="crm-software-hint" class="govuk-hint">
+                  Select one option.
+              </div>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="select-software-1" name="select-software" type="radio" value="Salesforge">
