@@ -19,7 +19,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#add-ons">You must select an option from those listed below</a>
+        <a href="#add-ons">Select yes if this is an add on to {{ data['select-software'] }}</a>
       </li>
     </ul>
   </div>
@@ -40,7 +40,7 @@
               </h1>
             </legend>
             <span style="display:none" id="add-ons" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>Please select an option.
+              <span class="govuk-visually-hidden">Error:</span>Select yes if this is an add on to {{ data['select-software'] }}
             </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
