@@ -60,14 +60,31 @@ router.post('/companies-house-answer', function (req, res) {
   if (isCompaniesHouse  == "Yes"){
     // Send user to next page
     res.redirect('sme-v3/company/companies-house-number')
-  } else if (isCompaniesHouse  == "No FCA"){
+  } else{
       // Send user to next page
-      res.redirect('sme-v3/company/financial-conduct-authority-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('sme-v3/company/ineligible')
-  }
+      res.redirect('sme-v3/company/financial-conduct-authority-question')
+  } 
 })
+
+
+
+// Add your routes here - above the module.exports line
+router.post('/fca-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isCompaniesHouse = req.session.data['company-number']
+
+  // Check whether the variable matches a condition
+  if (isCompaniesHouse  == "Yes"){
+    // Send user to next page
+    res.redirect('sme-v3/company/financial-conduct-authority-number')
+  } else {
+      // Send user to next page
+      res.redirect('sme-v3/company/ineligible')
+  } 
+})
+
+
 
 // Add your routes here - above the module.exports line
 router.post('/select-software-category-answer', function (req, res) {
