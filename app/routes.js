@@ -80,7 +80,7 @@ router.post('/fca-answer', function (req, res) {
     res.redirect('sme-v3/company/financial-conduct-authority-number')
   } else {
       // Send user to next page
-      res.redirect('sme-v3/company/ineligible')
+      res.redirect('sme-v3/company/fca-ineligible')
   } 
 })
 
