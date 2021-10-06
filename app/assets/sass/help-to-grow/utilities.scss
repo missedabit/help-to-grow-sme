@@ -29,3 +29,190 @@
 
 .govuk-template { background-color: #f3f2f1; }
 .govuk-footer { background: #f3f2f1; }
+
+
+/*Progress bar*/
+.htg-progress-bar {
+    margin-bottom: 40px;
+  }
+  
+  .htg-progress-bar__list {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: justify;
+    vertical-align: top;
+  }
+  
+  .htg-progress-bar__list::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .htg-progress-bar__list::before {
+    border-top: 6px solid #FFB000;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 13px;
+    width: 100%;
+  }
+  
+  .htg-progress-bar__list-item {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: inline-block;
+    max-width: 20%;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+  }
+  
+  @media print {
+    .htg-progress-bar__list-item {
+      font-family: sans-serif;
+    }
+  }
+  
+  @media (min-width: 40.0625em) {
+    .htg-progress-bar__list-item {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+    }
+  }
+  
+  @media print {
+    .htg-progress-bar__list-item {
+      font-size: 14pt;
+      line-height: 1.15;
+    }
+  }
+  
+  .htg-progress-bar__list-item:first-child::before, .htg-progress-bar__list-item:last-child::before {
+    border-top: 6px solid #ffffff;
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 50%;
+  }
+  
+  .htg-progress-bar__list-item:first-child::before {
+    left: 0;
+  }
+  
+  .htg-progress-bar__list-item:last-child::before {
+    left: auto;
+    right: 0;
+  }
+  
+  .htg-progress-bar__list-item[aria-current=step] {
+    font-weight: 700;
+  }
+  
+  .htg-progress-bar__icon {
+    position: relative;
+    background-color: #ffffff;
+    border: 6px solid #FFB000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32px;
+  }
+  
+  .htg-progress-bar__icon--complete {
+    background-color: #FFB000;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  
+  .htg-progress-bar__label {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    display: block;
+    font-weight: inherit;
+    margin-top: 10px;
+    position: relative;
+    word-wrap: break-word;
+  }
+  
+  @media print {
+    .htg-progress-bar__label {
+      font-family: sans-serif;
+    }
+  }
+  
+  @media (min-width: 40.0625em) {
+    .htg-progress-bar__label {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+  }
+  
+  @media print {
+    .htg-progress-bar__label {
+      font-size: 14pt;
+      line-height: 1.2;
+    }
+  }
+  
+
+
+
+/*Progress bar*/
+.htg-progress-bar1 {
+    padding:0;
+    margin:0;
+    margin-bottom: 40px;
+    width:100%;
+  }
+
+
+  .htg-progress-bar1 ul {
+    margin:0 2px 0 0;
+    padding:0;
+    width:100%;
+    display:inline-block;
+    background-color:#f3f2f1;
+    border-radius:10px
+  }
+
+
+  .htg-progress-bar1 ul li {
+    list-style-type:none;
+    display:inline-block;
+    background-color:#FFB000;
+    padding:5px;
+    border-radius:10px;
+  }
+
+  
+  .htg-progress-bar-stage1 { width:20% }
+  .htg-progress-bar-stage2 { width:40% }
+  .htg-progress-bar-stage3 { width:60% }
+  .htg-progress-bar-stage4 { width:80% }
+  .htg-progress-bar-stage5 { width:100% }
+
+
+
+
+
+
