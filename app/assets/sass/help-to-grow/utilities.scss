@@ -6,7 +6,6 @@
     border-bottom: 10px solid #FFB000;
 }
 
-
 .govuk-footer__copyright-logo {
     background-image: url(../images/govuk-crest.png);
 }
@@ -29,3 +28,8 @@
 
 .govuk-template { background-color: #f3f2f1; }
 .govuk-footer { background: #f3f2f1; }
+
+@media (min-width: 40.0625em) {
+    .govuk-main-wrapper { padding-top: 20px; padding-bottom: 40px;
+    }
+}
