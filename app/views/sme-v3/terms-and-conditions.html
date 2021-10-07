@@ -7,8 +7,7 @@
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<br>
-  <a class="govuk-back-link" href="applicant/check-your-answers">Back</a>
+<p><a class="govuk-back-link  govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="applicant/check-your-answers">Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -31,11 +30,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="terms-policy" action="applicant/check-work-email" method="get">
+      <form class="terms-policy" action="applicant/check-your-answers" method="get">
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset" aria-describedby="terms-policy-hint">
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-l">Section 4 of 6</span>
               <h1 class="govuk-fieldset__heading">
@@ -45,9 +44,9 @@
             <span style="display:none" id="terms-policy" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Select if you have read and accepted both the terms and conditions and privacy policy
             </span>
-            <div id="terms-policy-hint" class="govuk-hint">
+            <p>
               Before you get your Help to Grow: Digital software discount for <strong>{{ data['select-software'] }}</strong>, you will need to read and accept the <a href="#" class="govuk-link">terms and conditions</a> and agree to the <a href="#" class="govuk-link">privacy policy</a>.
-            </div>
+            </p>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="terms-policy-1" name="terms-policy" type="checkbox" value="terms">
@@ -76,6 +75,41 @@
 
 
     </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+          Useful links
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+            <a href="#" class="govuk-link">
+                Terms and conditions
+            </a>
+            </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Privacy policy
+              </a>
+              </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Learning platform
+              </a>
+              </li>
+          </ul>
+          </nav>
+      </aside>
+    </div>
+
+
+
+
+
   </div>
 
 {% endblock %}
