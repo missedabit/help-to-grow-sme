@@ -27,7 +27,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="check-company-details" method="post">
+        <form class="form" action="check-company-details" method="post" novalidate>
 
           <div class="govuk-form-group">
             <span class="govuk-caption-l">Section 2 of 6</span>
@@ -39,7 +39,7 @@
             <span style="display:none" id="company-number" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Enter the Companies House number
             </span>
-            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
+            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text" maxlength="8" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
           </div>
 
           <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>
