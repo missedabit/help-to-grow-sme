@@ -84,12 +84,18 @@ $( document ).ready(function() {
   });
 
   // form validation for company house number page
-  $('.company-house-number').on("click", function() {
+  $('.company-house-number').on("click", function(event) {
     if (!$("input[name='companies-house-number']").val()) {
       $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
       $(".govuk-error-summary, .govuk-error-message").show();
       return false;
-    }
+    } 
+  });
+
+  $("#companies-house-number").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        return false;
+   }
   });
 
   // form validation for fca number page
@@ -127,6 +133,7 @@ $( document ).ready(function() {
       return false;
     }
   });
+
 
   // form validation for terms and conditions page
   $('.terms-policy').submit(function() {
