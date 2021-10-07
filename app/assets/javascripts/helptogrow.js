@@ -139,4 +139,13 @@ $( document ).ready(function() {
     }
  });
 
+  // form validation for filterTable page
+  $('.select-product').on("click", function() {
+    if (!$("input[name='product-name']:checked").val()) {
+      $("div").closest(".filter-table").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
+
 });
