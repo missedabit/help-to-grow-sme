@@ -5,49 +5,8 @@
 {% endblock %}
 
 {% block beforeContent %}
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-
-   <!-- start progress bar -->
-
-   <div class="htg-progress-bar" style="margin-top:10px">
-    <ol class="htg-progress-bar__list">
-    
-    <li class="htg-progress-bar__list-item" aria-current="step">
-      <span class="htg-progress-bar__icon"></span>
-      <span class="htg-progress-bar__label">Software details</span>
-    </li>
-    
-    <li class="htg-progress-bar__list-item">
-      <span class="htg-progress-bar__icon"></span>
-      <span class="htg-progress-bar__label">Company details</span>
-    </li>
-    
-    <li class="htg-progress-bar__list-item">
-      <span class="htg-progress-bar__icon"></span>
-      <span class="htg-progress-bar__label">Applicant details</span>
-    </li>
-    
-    <li class="htg-progress-bar__list-item">
-      <span class="htg-progress-bar__icon"></span>
-      <span class="htg-progress-bar__label">Complete</span>
-    </li>
-    
-    </ol>
-  </div> 
-  
-<!-- end progress bar -->
-
-
-
-  </div>
-</div>
-
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<br>
   <a class="govuk-back-link" href="../start-page">Back</a>
 {% endblock %}
 
@@ -61,7 +20,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#select-software-category">Select the type of business software you are interested in</a>
+          <a href="#select-software-category">Select the type of business software you want to buy</a>
         </li>
       </ul>
     </div>
@@ -72,20 +31,52 @@
     <div class="govuk-grid-column-two-thirds">
 
 
+    <!-- start progress bar
+
+    <div class="htg-progress-bar">
+      <ol class="htg-progress-bar__list">
+
+      <li class="htg-progress-bar__list-item" aria-current="step">
+        <span class="htg-progress-bar__icon"></span>
+        <span class="htg-progress-bar__label">Software details</span>
+      </li>
+
+      <li class="htg-progress-bar__list-item">
+        <span class="htg-progress-bar__icon"></span>
+        <span class="htg-progress-bar__label">Company details</span>
+      </li>
+
+      <li class="htg-progress-bar__list-item">
+        <span class="htg-progress-bar__icon"></span>
+        <span class="htg-progress-bar__label">Applicant details</span>
+      </li>
+
+      <li class="htg-progress-bar__list-item">
+        <span class="htg-progress-bar__icon"></span>
+        <span class="htg-progress-bar__label">Complete</span>
+      </li>
+
+      </ol>
+    </div>
+    -->
+
+
+
         <form class="form" action="/select-software-category-answer" method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-l">Section 1 of 3: software</span>
                 <h1 class="govuk-fieldset__heading">
-                  What type of business software are you interested in?
+                  What type of business software do you want to buy?
                 </h1>
               </legend>
               <div id="software-category-hint" class="govuk-hint">
                   Select one option.
               </div>
               <span style="display:none" id="select-software-category" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span>Select the type of business software you are interested in
+                <span class="govuk-visually-hidden">Error:</span>Select the type of business software you want to buy
               </span>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
@@ -103,7 +94,7 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="select-software-category-3" name="select-software-category" type="radio" value="eCommerce">
                   <label class="govuk-label govuk-radios__label" for="select-software-category-3">
-                    eCommerce
+                    E-commerce
                   </label>
                 </div>
               </div>

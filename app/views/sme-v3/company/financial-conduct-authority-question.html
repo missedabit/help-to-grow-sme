@@ -7,10 +7,16 @@
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <br>
-  <a class="govuk-back-link" href="company-size">Back</a>
+  <a class="govuk-back-link" href="companies-house-question">Back</a>
 {% endblock %}
 
 {% block content %}
+
+
+
+
+
+
 
 
 
@@ -21,7 +27,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#company-house">Select yes if the business has a Companies House number</a>
+          <a href="#company-house">Select yes if the business has a Financial Conduct Authority number</a>
         </li>
       </ul>
     </div>
@@ -32,23 +38,21 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="/companies-house-answer" method="post">
+      <form class="form" action="/fca-answer" method="post">
 
         <div class="govuk-form-group">
 
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 2 of 3: company details</span>
+              <span class="govuk-caption-l">Section 2 of 3: company details</span>
               <h1 class="govuk-fieldset__heading">
-                Does the business have a Companies House number?
+                Does the business have a Financial Conduct Authority number?
               </h1>
             </legend>
 
-            <p class="govuk-body">This is also known as a company registration number.</p>
-            <p class="govuk-body">You can find the Companies House number on the certificate of incorporation. You can also <a href="https://find-and-update.company-information.service.gov.uk" class="govuk-link" target="_blank">search the Companies House register</a> (opens in new tab).</p>
 
             <span style="display:none" id="company-house" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>Select yes if the business has a Companies House number
+              <span class="govuk-visually-hidden">Error:</span>Select yes if the business has a Financial Conduct Authority number
             </span>
 
             <div class="govuk-radios govuk-radios--inline">
@@ -59,13 +63,12 @@
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="company-number-2" name="company-number" type="radio" value="No" aria-describedby="sign-in-2-item-hint">
+                <input class="govuk-radios__input" id="company-number-2" name="company-number" type="radio" value="No FCA" aria-describedby="sign-in-2-item-hint">
                 <label class="govuk-label govuk-radios__label" for="company-number-2">
                   No
                 </label>
 
               </div>
-
             </div>
 
           </fieldset>
