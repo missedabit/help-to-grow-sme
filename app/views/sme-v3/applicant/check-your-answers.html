@@ -12,7 +12,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-        <span class="govuk-caption-l">Section 3 of 6</span>
+        <span class="govuk-caption-l">Section 4 of 6</span>
       <h1 class="govuk-heading-l">Check your answers</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -60,12 +60,34 @@
           </dd>
         </div>
 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Agreed terms and conditions
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Agreed privacy policy
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+        </div>
+
 
       </dl>
 
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="../terms-and-conditions" method="post" novalidate>
+      <form action="check-work-email" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
@@ -76,5 +98,39 @@
       </form>
 
     </div>
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+          Useful links
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+            <a href="#" class="govuk-link">
+                Terms and conditions
+            </a>
+            </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Privacy policy
+              </a>
+              </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Learning platform
+              </a>
+              </li>
+          </ul>
+          </nav>
+      </aside>
+    </div>
+
+
+
+
   </div>
 {% endblock %}

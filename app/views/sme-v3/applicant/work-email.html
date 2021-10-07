@@ -6,8 +6,7 @@
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<br>
-  <a class="govuk-back-link" href="role">Back</a>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="role">Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -29,10 +28,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="check-your-answers" method="post">
+      <form class="form" action="../terms-and-conditions" method="post">
 
         <div class="govuk-form-group">
-          <span class="govuk-caption-l">Section 3 of 6</span>
+          <span class="govuk-caption-l">Section 3 of 6: applicant details</span>
           <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="email">
             What is your work email address?
           </label></h1>
@@ -51,6 +50,37 @@
       </form>
 
     </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+          Useful links
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+            <a href="#" class="govuk-link">
+                Terms and conditions
+            </a>
+            </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Privacy policy
+              </a>
+              </li>
+              <li>
+              <a href="#" class="govuk-link">
+                  Learning platform
+              </a>
+              </li>
+          </ul>
+          </nav>
+      </aside>
+    </div>
+
+
+
   </div>
 
 {% endblock %}
