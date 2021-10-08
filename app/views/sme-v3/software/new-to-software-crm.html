@@ -6,7 +6,8 @@
 
 {% block beforeContent %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="select-crm-software">Back</a></p>
+<br>
+  <a class="govuk-back-link" href="select-crm-software">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -27,12 +28,12 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form class="form" action="/sme-v3/new-software-answer" method="post">
+        <form class="form" action="/new-software-answer" method="post">
 
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <span class="govuk-caption-l"></span>
+                  <span class="govuk-caption-l">Section 1 of 4</span>
                   <h1 class="govuk-fieldset__heading">
                     Are you buying {{ data['select-software'] }} for the first time?
                   </h1>
@@ -62,10 +63,6 @@
         </form>
 
     </div>
-
-
-
-
   </div>
 
 {% endblock %}
