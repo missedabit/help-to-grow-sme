@@ -35,7 +35,7 @@
       <div class="govuk-error-summary__body">
         <ul class="govuk-list govuk-error-summary__list">
           <li>
-            <a href="#select-product">Select a software product to continue</a>
+            <a href="#select-product">Select a software product</a>
           </li>
         </ul>
       </div>
@@ -52,13 +52,13 @@
 
             <div class="govuk-form-group">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 1 of 6</span>
+                <span class="govuk-caption-l">Section 1 of 4</span>
                 <h1 class="govuk-fieldset__heading">
-                  What software product do you want to buy?
+                  What software do you want to buy?
                 </h1>
               </legend>
               <label class="govuk-label" for="category">
-               Select software category
+               Select category
               </label>
               <select class="govuk-select govuk-!-margin-right-3 govuk-!-margin-bottom-3" id="category" name="category">
                 <option value="cat1" selected>Accounting</option>
@@ -73,7 +73,7 @@
         </div>
 
         <span style="display:none" id="select-product" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> Select a software product to continue
+          <span class="govuk-visually-hidden">Error:</span> Select a software product
         </span>
 
 
@@ -85,12 +85,12 @@
           <thead class="govuk-table__head">
           <tr class="govuk-table__row">
 
-            <th scope="col" class="govuk-table__header">Product name</th>
-            <th scope="col" class="govuk-table__header">Product type</th>
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Type</th>
             <th scope="col" class="govuk-table__header">Price before discount</th>
-            <th scope="col" class="govuk-table__header">Price after discount</th>
+            <th scope="col" class="govuk-table__header">Price after 50% discount</th>
             <th scope="col" class="govuk-table__header">Discount period</th>
-            <th scope="col" class="govuk-table__header">Select product</th>
+            <th scope="col" class="govuk-table__header"></th>
 
           </tr>
           </thead>
@@ -164,7 +164,7 @@
 
 
         <button class="govuk-button select-product" data-module="govuk-button">
-          Continue
+          Select software and continue
         </button>
 
       </form>
