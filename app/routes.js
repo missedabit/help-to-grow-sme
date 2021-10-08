@@ -207,12 +207,13 @@ router.post('/sme-v3/select-software-category-answer', function (req, res) {
     res.redirect('software/select-crm-software')
   } else if (isSoftwareCategory  == "Accounting"){
       // Send user to next page
-      res.redirect('software/select-accountancy-software')
+      res.redirect('software/select-accountancy-product')
   } else {
     // Send user to ineligible page
     res.redirect('software/select-ecommerce-software')
   }
 })
+
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v3/company-size-answer', function (req, res) {
