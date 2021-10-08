@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
 {% endblock %}
@@ -12,7 +13,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <span class="govuk-caption-l"></span>
+      <span class="govuk-caption-l">Section 1 of 4</span>
       <h1 class="govuk-heading-l">Check your answer</h1>
 
       <!--
@@ -27,12 +28,49 @@
             {{ data['select-software'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="select-accountancy-product">
+            <a href="select-accountancy-software">
               Change
               <span class="govuk-visually-hidden">Software product</span>
             </a>
           </dd>
         </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Price before discount
+          </dt>
+          <dd class="govuk-summary-list__value">
+           £100
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Price after discount
+          </dt>
+          <dd class="govuk-summary-list__value">
+           £50
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Discount period
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Dec 2021 to Dec 2022
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
 
       </dl>
       <!--

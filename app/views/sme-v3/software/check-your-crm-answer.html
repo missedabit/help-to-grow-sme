@@ -13,8 +13,8 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <span class="govuk-caption-l"></span>
-      <h1 class="govuk-heading-l">Check your answers</h1>
+      <span class="govuk-caption-l">Section 1 of 4</span>
+      <h1 class="govuk-heading-l">Check your answer</h1>
 
       <!--
       <h2 class="govuk-heading-m">Company details</h2>
@@ -22,72 +22,52 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Software type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['select-software-category'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden">Company number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Software product
+            Software
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['select-software'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="select-crm-software">
               Change
-              <span class="govuk-visually-hidden">Company number</span>
+              <span class="govuk-visually-hidden">Software product</span>
             </a>
           </dd>
         </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          New software
+            Price before discount
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['new-to-software'] }}
+           £100
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
-            </a>
           </dd>
         </div>
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Major upgrade
+            Price after discount
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+           £50
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="directors-dob">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
-            </a>
           </dd>
         </div>
+
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Add on
+            Discount period
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            Dec 2021 to Dec 2022
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden">Company number</span>
-            </a>
           </dd>
         </div>
 
@@ -96,9 +76,8 @@
       <!--
       <h2 class="govuk-heading-m">Now send your application</h2>
       -->
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      <form action="../task-list" method="post" novalidate>
+      <form action="new-to-software" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
