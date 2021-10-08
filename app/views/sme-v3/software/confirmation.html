@@ -16,7 +16,7 @@
 
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Your business is not eligible for the scheme</h1>
+        <h1 class="govuk-panel__title">Your business is not eligible</h1>
 
         <div class="govuk-panel__body">
         <!--  Your reference number<br><strong>HDJ2123F</strong>-->
@@ -24,13 +24,12 @@
 
       </div>
       <br>
-      <p>
-        Your business is not eligible to buy <strong>{{ data['select-software'] }}</strong> as part of the Help to Grow: Digital software discount scheme.
-      </p>
-
-      <p>
-        This is because the software
-      </p>
+      <p>This is because <strong>{{ data['select-software'] }}</strong> is not:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>being bought for the first time</li>
+            <li>a major upgrade</li>
+            <li>an add on</li>
+        </ul>
 
       <h2 class="govuk-heading-m">Appeal</h2>
 
