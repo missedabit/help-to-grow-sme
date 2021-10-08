@@ -126,13 +126,46 @@ $( document ).ready(function() {
   });
 
   // form validation for applicant work email page
-  $('.work-email').on("click", function() {
-    if (!$("input[name='email']").val()) {
-      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-      $(".govuk-error-summary, .govuk-error-message").show();
-      return false;
+  // $('.work-email').on("click", function() {
+  //   if (!$("input[name='email']").val()) {
+  //     $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+  //     $(".govuk-error-summary, .govuk-error-message").show();
+  //     return false;
+  //   }
+  // });
+
+
+
+  $('.work-email').click(function(e) {
+    var sEmail = $("input[name='email']").val();
+    if ($.trim(sEmail).length == 0) {
+        alert('Please enter valid email address');
+        $("input:text").val("Not an email address");
+        e.preventDefault();
     }
-  });
+    if (validateEmail(sEmail)) {
+        console.log('Email is valid');
+    }
+    else {
+        $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+        $(".govuk-error-summary, .govuk-error-message").show();
+        $("input:text").val("Not an email address");
+        e.preventDefault();
+    }
+});
+
+
+
+function validateEmail(sEmail) {
+  var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if (filter.test(sEmail)) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+
 
 
   // form validation for terms and conditions page
