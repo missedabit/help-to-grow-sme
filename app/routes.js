@@ -172,7 +172,7 @@ router.post('/sme-v3/companies-house-answer', function (req, res) {
   } else{
       // Send user to next page
       res.redirect('company/financial-conduct-authority-question')
-  } 
+  }
 })
 
 
@@ -190,7 +190,7 @@ router.post('/sme-v3/fca-answer', function (req, res) {
   } else {
       // Send user to next page
       res.redirect('company/fca-ineligible')
-  } 
+  }
 })
 
 
@@ -202,7 +202,7 @@ router.post('/sme-v3/select-software-category-answer', function (req, res) {
   var isSoftwareCategory = req.session.data['select-software-category']
 
   // Check whether the variable matches a condition
-  if (isSoftwareCategory  == "CRM"){
+  if (isSoftwareCategory  == "customer relationship management"){
     // Send user to next page
     res.redirect('software/select-crm-software')
   } else if (isSoftwareCategory  == "Accounting"){
