@@ -155,7 +155,7 @@ router.post('/sme-v3/add-on-answer', function (req, res) {
     res.redirect('company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('software/confirmation')
+    res.redirect('software/ineligible')
   }
 })
 
