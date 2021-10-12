@@ -84,12 +84,18 @@ $( document ).ready(function() {
   });
 
   // form validation for company house number page
-  $('.company-house-number').on("click", function() {
+  $('.company-house-number').on("click", function(event) {
     if (!$("input[name='companies-house-number']").val()) {
       $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
       $(".govuk-error-summary, .govuk-error-message").show();
       return false;
-    }
+    } 
+  });
+
+  $("#companies-house-number").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        return false;
+   }
   });
 
   // form validation for fca number page
@@ -120,13 +126,47 @@ $( document ).ready(function() {
   });
 
   // form validation for applicant work email page
-  $('.work-email').on("click", function() {
-    if (!$("input[name='email']").val()) {
-      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-      $(".govuk-error-summary, .govuk-error-message").show();
-      return false;
+  // $('.work-email').on("click", function() {
+  //   if (!$("input[name='email']").val()) {
+  //     $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+  //     $(".govuk-error-summary, .govuk-error-message").show();
+  //     return false;
+  //   }
+  // });
+
+
+
+  $('.work-email').click(function(e) {
+    var sEmail = $("input[name='email']").val();
+    if ($.trim(sEmail).length == 0) {
+        alert('Please enter valid email address');
+        $("input:text").val("Not an email address");
+        e.preventDefault();
     }
-  });
+    if (validateEmail(sEmail)) {
+        console.log('Email is valid');
+    }
+    else {
+        $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+        $(".govuk-error-summary, .govuk-error-message").show();
+        $("input:text").val("Not an email address");
+        e.preventDefault();
+    }
+});
+
+
+
+function validateEmail(sEmail) {
+  var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if (filter.test(sEmail)) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+
+
 
   // form validation for terms and conditions page
   $('.terms-policy').submit(function() {
@@ -138,5 +178,14 @@ $( document ).ready(function() {
           return false;
     }
  });
+
+  // form validation for filterTable page
+  $('.select-product').on("click", function() {
+    if (!$("input[name='product-name']:checked").val()) {
+      $("div").closest(".filter-table").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
 
 });
