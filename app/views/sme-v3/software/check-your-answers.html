@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
 {% endblock %}
@@ -13,11 +14,8 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <span class="govuk-caption-l"></span>
-      <h1 class="govuk-heading-l">Check your answers</h1>
+      <h1 class="govuk-heading-l">Do you want to buy this software?</h1>
 
-      <!--
-      <h2 class="govuk-heading-m">Company details</h2>
-      -->
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -90,11 +88,8 @@
           </dd>
         </div>
 
-
       </dl>
-      <!--
-      <h2 class="govuk-heading-m">Now send your application</h2>
-      -->
+
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
       <form action="../task-list" method="post" novalidate>
@@ -108,5 +103,7 @@
       </form>
 
     </div>
+
+
   </div>
 {% endblock %}

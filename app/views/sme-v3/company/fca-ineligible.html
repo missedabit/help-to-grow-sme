@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="financial-conduct-authority-question">Back</a></p>
 {% endblock %}
@@ -14,19 +15,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <h1 class="govuk-heading-l">Your business is not eligible for the scheme</h1>
 
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Your business is not eligible for the scheme  Ineligible FCA page content goes here</h1>
-        <div class="govuk-panel__body">
-        <!--  Your reference number<br><strong>HDJ2123F</strong>-->
-        </div>
-      </div>
-      <!--
-      <p>
-        Your business is not eligible for the Help to Grow: Digital software scheme.
-      </p>
-      -->
-      <br>
       <p>
         Ineligible FCA page content goes here Ineligible FCA page content goes here Ineligible FCA page content goes here Ineligible FCA page content goes here
       </p>
@@ -43,10 +33,17 @@
 
       <p>Lorem ipsum.</p>
 
-      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+      <p><a href="../feedback">What did you think of this service?</a> (takes 30 seconds)</p>
 
 
     </div>
+
+
+
+
+
+
+
   </div>
 
 {% endblock %}

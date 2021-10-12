@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-question">Back</a></p>
 {% endblock %}
@@ -27,10 +28,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="check-company-details" method="post">
+        <form class="form" action="check-company-details" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <span class="govuk-caption-l">Section 2 of 6</span>
+            <span class="govuk-caption-l">Section 2 of 4</span>
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-house-number">
                 What is the Companies House number?
               </label>
@@ -39,7 +40,7 @@
             <span style="display:none" id="company-number" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Enter the Companies House number
             </span>
-            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
+            <input class="govuk-input" id="companies-house-number" name="companies-house-number" type="text" maxlength="8" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
           </div>
 
           <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>
@@ -47,6 +48,8 @@
         </form>
 
     </div>
+
+
   </div>
 
 {% endblock %}

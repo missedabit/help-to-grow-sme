@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
 {% endblock %}
@@ -34,11 +35,14 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-l">Section 1 of 6</span>
+              <span class="govuk-caption-l">Section 1 of 4</span>
               <h1 class="govuk-fieldset__heading">
                 Are you buying {{ data['select-software'] }} for the first time?
               </h1>
             </legend>
+            <p class="govuk-body">
+            Eligible businesses can get discount on new business software as part of the scheme.
+            </p>
             <span style="display:none" id="select-software-purchase" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Select yes if you are buying {{ data['select-software'] }} for the first time
             </span>
@@ -64,6 +68,8 @@
       </form>
 
     </div>
+
+
   </div>
 
 {% endblock %}

@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="check-work-email">Back</a></p>
 {% endblock %}
@@ -13,15 +14,19 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">Section 6 of 6</span>
-      <h1 class="govuk-heading-l">You've verified your email address</h1>      
-      <p class="govuk-body">You can now apply for your Help to Grow: Digital software discount</p>
+
+
+      <span class="govuk-caption-l">Section 4 of 4</span>
+      <h1 class="govuk-heading-l">You've confirmed your email address</h1>
+      <p class="govuk-body">You can now apply for your software discount.</p>
+      <div class="govuk-inset-text">If you apply for the discount, we will use Indesser to check your company details.</div>
+      
       <form class="form" action="../token-issued" method="get">
         <button class="govuk-button" data-module="govuk-button">Apply</button>
       </form>
+
+
     </div>
-
-
   </div>
 
 {% endblock %}

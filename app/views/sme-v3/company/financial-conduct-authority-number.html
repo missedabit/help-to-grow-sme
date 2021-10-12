@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="financial-conduct-authority-question">Back</a></p>
 {% endblock %}
@@ -31,7 +32,7 @@
         <form class="form" action="check-company-details" method="get">
 
           <div class="govuk-form-group">
-            <span class="govuk-caption-l">Section 2 of 6</span>
+            <span class="govuk-caption-l">Section 2 of 4</span>
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="fca-number">
               What is the Financial Conduct Authority number?
               </label>
@@ -48,6 +49,8 @@
         </form>
 
     </div>
+
+    
   </div>
 
 {% endblock %}

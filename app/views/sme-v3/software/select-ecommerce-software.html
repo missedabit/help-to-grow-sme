@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
 <p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="select-software-category">Back</a></p>
 {% endblock %}
@@ -18,7 +19,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#select-ecommerce">Select the eCommerce software you would like to buy</a>
+          <a href="#select-ecommerce">Select the e-commerce software you want to buy</a>
         </li>
       </ul>
     </div>
@@ -28,21 +29,21 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-        <form class="form" action="new-to-software" method="post">
+        <form class="form" action="check-your-ecommerce-answer" method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <span class="govuk-caption-l">Section 1 of 6</span>
+                <span class="govuk-caption-l">Section 1 of 4</span>
                 <h1 class="govuk-fieldset__heading">
                   What e-commerce software do you want to buy?
                 </h1>
               </legend>
               <div id="software-category-hint" class="govuk-hint">
-                  Select one option.
+                  Select one software product.
               </div>
               <span style="display:none" id="select-ecommerce" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span>Select the eCommerce software you would like to buy
+                <span class="govuk-visually-hidden">Error:</span>Select the e-commerce software you want to buy
               </span>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
@@ -66,6 +67,8 @@
         </form>
 
     </div>
+
+
   </div>
 
 {% endblock %}
