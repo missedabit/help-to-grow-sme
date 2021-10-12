@@ -14,44 +14,39 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form class="form" action="/sme-v3/major-upgrade-answer" method="post">
+      
+      <form class="form" action="/sme-v3/major-upgrade-answer" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Is this a major upgrade from a previous version of {{ data['select-software'] }}?
-            </h1>
-          </legend>
-          <!--
-          <p class="govuk-body">Major upgrade from a previous version means...</p>
-          -->
-          <br>
-          <div class="govuk-radios govuk-radios--inline">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="major-upgrade-1" name="major-upgrade" type="radio" value="Yes">
-              <label class="govuk-label govuk-radios__label" for="major-upgrade-1">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="major-upgrade-2" name="major-upgrade" type="radio" value="No">
-              <label class="govuk-label govuk-radios__label" for="major-upgrade-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is this a major upgrade from a previous version of {{ data['select-software'] }}?
+              </h1>
+            </legend>
 
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="major-upgrade-1" name="major-upgrade" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="major-upgrade-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="major-upgrade-2" name="major-upgrade" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="major-upgrade-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
       </form>
 
     </div>
-
-
-
 
 
   </div>
