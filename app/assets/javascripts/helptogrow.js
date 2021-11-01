@@ -89,8 +89,10 @@ $( document ).ready(function() {
       $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
       $(".govuk-error-summary, .govuk-error-message").show();
       return false;
-    } 
+    }
   });
+
+
 
   $("#companies-house-number").keypress(function (e) {
     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
@@ -134,6 +136,19 @@ $( document ).ready(function() {
   //   }
   // });
 
+
+
+
+  // form validation for indessa check
+  $('#experian-check').on("click", function() {
+    window.alert({number: companies-house-number});
+    // var companyNumber = {{'companies-house-number'}};
+    /*if (companyNumber == '22222' {
+      location.href = '../token-not-issued.html';
+    } else {
+      location.href = '../token-issued.html';
+    }*/
+  });
 
 
   $('.work-email').click(function(e) {

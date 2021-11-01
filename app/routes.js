@@ -359,4 +359,38 @@ router.post('/sme-v4/company-size-answer', function (req, res) {
 })
 
 
+// Add your routes here - above the module.exports line
+router.post('/sme-v4/company/check-company-details', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var companyNumber = req.session.data['companies-house-number']
+
+  // Check whether the variable matches a condition
+  if (companyNumber  == "11111"){
+    // Send user to next page
+    res.redirect('no-companies-house-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('check-company-details')
+  }
+
+})
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v4/token-issued', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var CompanyNumber = req.session.data['companies-house-number'];
+
+  // Send user to ineligible page
+  if (CompanyNumber  == "22222") {
+    // Send user to next page
+    res.redirect('/sme-v4/token-not-issued');
+  } else {
+    res.redirect('/sme-v4/token-issued');
+  }
+
+})
+
+
 module.exports = router
