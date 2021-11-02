@@ -369,12 +369,16 @@ router.post('/sme-v4/company/check-company-details', function (req, res) {
   if (companyNumber  == "11111"){
     // Send user to next page
     res.redirect('no-companies-house-number')
+  } else if (companyNumber  == "33333"){
+    // Send user to next page
+    res.redirect('no-companies-house-api')
   } else {
     // Send user to ineligible page
     res.redirect('check-company-details')
   }
 
 })
+
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v4/token-issued', function (req, res) {
