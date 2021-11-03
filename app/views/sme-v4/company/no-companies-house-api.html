@@ -7,7 +7,7 @@
 {% block beforeContent %}
 {% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-question">Back</a></p>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-number">Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -19,9 +19,16 @@
 
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-house-number">
-                Companies house API not available
+                The Companies House register could not be contacted
               </label>
             </h1>
+
+            <p class="govuk-body">You can <a href="https://help-to-grow-sme.herokuapp.com/sme-v4/company/companies-house-number" class="govuk-link">re-enter the Companies House number</a> later.</p>
+
+            <div class="govuk-inset-text">
+            <p class="govuk-body">You will not be able to continue with your application until you&apos;ve confirmed the Companies House number.</p>
+            </div>
+
           </div>
 
 <!--          <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>-->
