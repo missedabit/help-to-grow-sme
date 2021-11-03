@@ -1,7 +1,7 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  Terms and conditions and Privacy Consent
+  Terms and conditions
 {% endblock %}
 
 
@@ -21,7 +21,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#terms-policy">Select if you have read and accepted both the terms and conditions and privacy policy</a>
+          <a href="#terms-policy">Select if you have read and accepted subsidy control, terms and conditions and privacy policy</a>
         </li>
       </ul>
     </div>
@@ -43,12 +43,18 @@
               </h1>
             </legend>
             <span style="display:none" id="terms-policy" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>Select if you have read and accepted both the terms and conditions and privacy policy
+              <span class="govuk-visually-hidden">Error:</span>Select if you have read and accepted subsidy control, terms and conditions and privacy policy
             </span>
             <p>
-              Before you apply for your software discount for <strong>{{ data['select-software'] }}</strong>, you will need to read and accept the <a href="#" class="govuk-link">terms and conditions</a> and agree to the <a href="#" class="govuk-link">privacy policy</a>.
+              Before you apply for your software discount for <strong>{{ data['select-software'] }}</strong>, you will need to read and accept <a href="subsidy-control">subsidy control</a>, <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a> and agree to the <a href="privacy-policy" class="govuk-link">privacy policy</a>.
             </p>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="terms-policy-3" name="terms-policy" type="checkbox" value="privacy">
+                <label class="govuk-label govuk-checkboxes__label" for="terms-policy-3">
+                  I have read and agree to subsidy control
+                </label>
+              </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="terms-policy-1" name="terms-policy" type="checkbox" value="terms">
                 <label class="govuk-label govuk-checkboxes__label" for="terms-policy">
