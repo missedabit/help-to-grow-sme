@@ -7,7 +7,7 @@
 {% block beforeContent %}
 {% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
-<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-question">Back</a></p>
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-number">Back</a></p>
 {% endblock %}
 
 {% block content %}
@@ -19,9 +19,23 @@
 
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-house-number">
-                Companies house number not found
+                The Companies House number could not be found in the register
               </label>
             </h1>
+
+          <p class="govuk-body">Check you have entered the correct Companies House number.</p>
+          <p class="govuk-body">You can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>find the Companies House number on the certificate of incorporation</li>
+          <li><a href="https://find-and-update.company-information.service.gov.uk" target="_blank" class="govuk-link">search the Companies House register</a> for the company number (opens in new tab)</li>
+          </ul>
+
+          <p class="govuk-body">Then <a href="https://help-to-grow-sme.herokuapp.com/sme-v4/company/companies-house-number" class="govuk-link">re-enter the Companies House number</a>.</p>
+
+          <div class="govuk-inset-text">
+          <p class="govuk-body">If the Companies House number can <strong>not</strong> be found in the register, you will not be able to continue with your application.</p>
+          </div>
+
           </div>
 
 <!--          <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>-->
