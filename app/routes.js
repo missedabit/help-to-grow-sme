@@ -364,6 +364,7 @@ router.post('/sme-v4/company/check-company-details', function (req, res) {
 
   // Make a variable and give it the value from 'new-to-software'
   var companyNumber = req.session.data['companies-house-number']
+  var fcaNumber = req.session.data['fca-number']
 
   // Check whether the variable matches a condition
   if (companyNumber  == "11111"){
@@ -372,6 +373,9 @@ router.post('/sme-v4/company/check-company-details', function (req, res) {
   } else if (companyNumber  == "33333"){
     // Send user to next page
     res.redirect('no-companies-house-api')
+  } else if (fcaNumber  == "666666"){
+    // Send user to next page
+    res.redirect('no-fca-number')
   } else {
     // Send user to ineligible page
     res.redirect('check-company-details')
@@ -388,9 +392,15 @@ router.post('/sme-v4/token-issued', function (req, res) {
 
   // Send user to ineligible page
   if (CompanyNumber  == "22222") {
-    // Send user to next page
+
     res.redirect('/sme-v4/token-not-issued');
-  } else {
+  }
+  // Send user to Indessa service not available page
+  else if (CompanyNumber == "55555") {
+    res.redirect('/sme-v4/indessa-not-available');
+  }
+  else {
+    // Send user to next page
     res.redirect('/sme-v4/token-issued');
   }
 
