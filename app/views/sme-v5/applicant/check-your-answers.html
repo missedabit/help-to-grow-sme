@@ -21,6 +21,54 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+          Software name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{ data['select-software'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="../software/select-accountancy-software">
+              Change
+              <span class="govuk-visually-hidden"> software name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          <!-- {{ data['email'] }} -->
+          Thyme hand lotion
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="../company/companies-house-number">
+              Change
+              <span class="govuk-visually-hidden"> company name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Company number
+          </dt>
+          <dd class="govuk-summary-list__value">
+          <!-- {{ data['email'] }} -->
+          {{ data['companies-house-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="../company/companies-house-number">
+              Change
+              <span class="govuk-visually-hidden"> company name</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Applicant name
           </dt>
           <dd class="govuk-summary-list__value">
@@ -58,37 +106,6 @@
             <a href="work-email">
               Change
               <span class="govuk-visually-hidden"> work email address</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Software Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-          {{ data['select-software'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="../software/select-accountancy-software">
-              Change
-              <span class="govuk-visually-hidden"> software name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Company Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-          <!-- {{ data['email'] }} -->
-          Thyme hand lotion
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="../company/companies-house-number">
-              Change
-              <span class="govuk-visually-hidden"> company name</span>
             </a>
           </dd>
         </div>
