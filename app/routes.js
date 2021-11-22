@@ -544,6 +544,9 @@ router.post('/sme-v5/company/check-company-details', function (req, res) {
   } else if (companyNumber  == "33333"){
     // Send user to next page
     res.redirect('no-companies-house-api')
+  } else if (companyNumber  == "44444"){
+    // Send user to next page
+    res.redirect('company-voucher-already-applied')  
   } else if (fcaNumber  == "666666"){
     // Send user to next page
     res.redirect('no-fca-number')
