@@ -19,7 +19,7 @@ $( document ).ready(function() {
       return false;
     }
   });
-  
+
   // form validation for new to software page
   $('.select-software-purchase').on("click", function() {
     if (!$("input[name='new-to-software']:checked").val()) {
@@ -66,22 +66,38 @@ $( document ).ready(function() {
   });
 
   // form validation for company size page
-  $('.company-size').on("click", function() {
-    if (!$("input[name='company-size']:checked").val()) {
-      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-      $(".govuk-error-summary, .govuk-error-message").show();
-      return false;
-    }
-  });
+  // $('.company-size').on("click", function() {
+  //   if (!$("input[name='company-size']:checked").val()) {
+  //     $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+  //     $(".govuk-error-summary, .govuk-error-message").show();
+  //     return false;
+  //   }
+  // });
 
   // form validation for company size page
-  $('.company-house').on("click", function() {
-    if (!$("input[name='company-number']:checked").val()) {
-      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-      $(".govuk-error-summary, .govuk-error-message").show();
-      return false;
-    }
-  });
+  // $('.company-house').on("click", function() {
+  //   if (!$("input[name='company-number']:checked").val()) {
+  //     $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+  //     $(".govuk-error-summary, .govuk-error-message").show();
+  //     return false;
+  //   }
+  // });
+
+  // form validation for company size page
+    $('.company-size').on("click", function(event) {
+      if (!$("input[name='companies-size']").val()) {
+        $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+        $(".govuk-error-summary, .govuk-error-message").show();
+        return false;
+      }
+    });
+
+    $("#companies-size").keypress(function (e) {
+      if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+          return false;
+     }
+    });
+
 
   // form validation for company house number page
   $('.company-house-number').on("click", function(event) {
@@ -93,12 +109,12 @@ $( document ).ready(function() {
   });
 
 
-
   $("#companies-house-number").keypress(function (e) {
     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
         return false;
    }
   });
+
 
   // form validation for fca number page
   $('.fca-number').on("click", function() {
