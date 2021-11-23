@@ -220,7 +220,15 @@
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </strong>
+      </div>
+
+      <!-- <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p> -->
 
       <form action="applicant/check-work-email" method="post" novalidate>
 
