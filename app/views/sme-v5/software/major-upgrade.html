@@ -19,7 +19,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#major-upgrade">Select yes if this is a major upgrade from a previous version of {{ data['select-software'] }}</a>
+          <a href="#major-upgrade">Select yes if this is a major software upgrade from a previous version of {{ data['select-software'] }} for your business</a>
         </li>
       </ul>
     </div>
@@ -36,16 +36,21 @@
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <span class="govuk-caption-l">Section 1 of 4</span>
                 <h1 class="govuk-fieldset__heading">
-                  Is this a major upgrade from a previous version of {{ data['select-software'] }}?
+                  Is this a major software upgrade from a previous version of {{ data['select-software'] }} for your business?
+
                 </h1>
               </legend>
-              <!--
+
+
               <p class="govuk-body">
-              Eligible businesses can get discount on major upgrades to software they already own as part of the scheme
+              A purchase that represents a significant shift and change in operations is permitted and classed as a major upgrade. For example, from desktop-based applications to cloud-based software as a service. This includes major upgrades offered by your existing software supplier.
               </p>
-              -->
+              <p class="govuk-body">
+              A software purchase which moves between defined product variations from the same supplier - for example, from Bronze to Silver - is not permitted.
+              </p>
+
               <span style="display:none" id="major-upgrade" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span>Select yes if this is a major upgrade from a previous version of {{ data['select-software'] }}
+                <span class="govuk-visually-hidden">Error:</span>Select yes if this is a major software upgrade from a previous version of {{ data['select-software'] }} for your business
               </span>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
