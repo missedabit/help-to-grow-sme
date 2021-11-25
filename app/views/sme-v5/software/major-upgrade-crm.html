@@ -14,16 +14,22 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
+
       <form class="form" action="/sme-v5/major-upgrade-answer" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Is this a major upgrade from a previous version of {{ data['select-software'] }}?
+                Is this a major software upgrade from a previous version of {{ data['select-software'] }} for your business?
               </h1>
             </legend>
+            <p class="govuk-body">
+            A purchase that represents a significant shift and change in operations is permitted and classed as a major upgrade. For example, from desktop-based applications to cloud-based software as a service. This includes major upgrades offered by your existing software supplier.
+            </p>
+            <p class="govuk-body">
+            A software purchase which moves between defined product variations from the same supplier - for example, from Bronze to Silver - is not permitted.
+            </p>
 
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
