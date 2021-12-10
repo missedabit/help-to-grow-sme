@@ -46,7 +46,7 @@
               <span class="govuk-visually-hidden">Error:</span>Select if you have read and accepted the terms and conditions, privacy policy and subsidy control
             </span>
             <p>
-              Before you apply for software discount for <strong>{{ data['select-software'] }}</strong>, you will need to read and accept the <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a>, <a href="privacy-policy" class="govuk-link">privacy policy</a> and <a href="subsidy-control">subsidy control</a>.
+              Before you apply for your software discount for <strong>{{ data['select-software'] }}</strong>you will need to read and accept the <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a>, <a href="privacy-policy" class="govuk-link">privacy policy</a> and <a href="subsidy-control">subsidy control</a>. You can also opt-in to receive marketing communications for Help to Grow: Digital.
             </p>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
@@ -68,17 +68,25 @@
                   I have read and accept the subsidy control
                 </label>
               </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="terms-policy-4" name="terms-policy_opt" type="checkbox" value="privacyy">
+                <label class="govuk-label govuk-checkboxes__label" for="terms-policy-4">
+                  <p>I consent to the Department for Business, Energy & Industrial Strategy (BEIS) contacting me by email to keep me informed about news and events relating to Help to Grow: Digital.</p>
+                  <p>I understand that I can can withdraw or change my consent at any time by contacting <a href="mailto:sme.helptogrow@beis.gov.uk" class="govuk-link">sme.helptogrow@beis.gov.uk</a>.</p>
+                  <p>I am freely consenting to BEIS holding and processing my personal data for marketing communication purposes.</p>
+                </label>
+              </div>
             </div>
           </fieldset>
-
         </div>
-
 
         <button class="govuk-button" data-module="govuk-button">
           Accept and continue
         </button>
 
       </form>
+
+
 
 
 
