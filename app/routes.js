@@ -420,9 +420,26 @@ router.post('/sme-v5/new-software-answer', function (req, res) {
     res.redirect('company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('software/major-upgrade')
+    res.redirect('software/existing-customer')
   }
 })
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v5/existing-customer-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var existingcustomer = req.session.data['existing-customer']
+
+  // Check whether the variable matches a condition
+  if (existingcustomer  == "Yes"){
+    // Send user to next page
+    res.redirect('software/major-upgrade')
+  } else {
+    // Send user to ineligible page
+    res.redirect('company/company-size')
+  }
+})
+
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v5/major-upgrade-answer', function (req, res) {
@@ -546,7 +563,7 @@ router.post('/sme-v5/company/check-company-details', function (req, res) {
     res.redirect('no-companies-house-api')
   } else if (companyNumber  == "44444"){
     // Send user to next page
-    res.redirect('company-voucher-already-applied')  
+    res.redirect('company-voucher-already-applied')
   } else if (fcaNumber  == "666666"){
     // Send user to next page
     res.redirect('no-fca-number')
