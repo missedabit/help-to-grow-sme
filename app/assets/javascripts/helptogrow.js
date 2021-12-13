@@ -29,6 +29,15 @@ $( document ).ready(function() {
     }
   });
 
+  // form validation for new to software page
+  $('.select-existing-customer').on("click", function() {
+    if (!$("input[name='existing-customer']:checked").val()) {
+      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, .govuk-error-message").show();
+      return false;
+    }
+  });
+
   // form validation for major upgrade page
   $('.major-upgrade').on("click", function() {
     if (!$("input[name='major-upgrade']:checked").val()) {
