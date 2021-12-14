@@ -1,0 +1,35 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Email unsubscribed
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="" method="post">
+
+
+      <h1 class="govuk-heading-l">Email unsubscribed</h1>
+      <p>Your email has been removed from our mailing list.</p>
+      <!-- <h2 class="govuk-heading-m">Help improve government services</h2>
+      <p class="govuk-body">GOV.UK needs your help to improve and to make sure the website works well for the people who need it.</p>
+      <p><a href="https://signup.take-part-in-research.service.gov.uk/home" class="govuk-link">Sign up to help make GOV.UK better</a></p> -->
+      <!-- <br> -->
+      <p>For more information about the Help to Grow: Digital scheme, please visit our <a href="https://uat-www.learn-to-grow-your-business.service.gov.uk/" class="govuk-link">home page</a>.</p>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
