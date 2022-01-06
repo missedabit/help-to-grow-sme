@@ -4,6 +4,12 @@
   Email unsubscribed
 {% endblock %}
 
+{% block header %}
+{{ govukHeader({
+serviceName: 'Help to Grow: Digital'
+}) }}
+{% endblock %}
+
 {% block beforeContent %}
 {% include "includes/phasebanner.html" %}
 <img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
