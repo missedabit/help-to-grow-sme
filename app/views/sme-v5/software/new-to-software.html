@@ -1,7 +1,8 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  Are you buying {{ data['select-software'] }} for the first time?
+  Are you buying Cashoo for the first time?
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,8 +19,11 @@
     </h2>
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
-        <li>
+        <!-- <li>
           <a href="#select-software-purchase">Select yes if you are buying {{ data['select-software'] }} for the first time</a>
+        </li> -->
+        <li>
+          <a href="#select-software-purchase">Select yes if you are buying Cashoo for the first time</a>
         </li>
       </ul>
     </div>
@@ -37,13 +41,17 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-l">Section 1 of 4</span>
               <h1 class="govuk-fieldset__heading">
-                Are you buying {{ data['select-software'] }} for the first time?
+                Are you buying Cashoo for the first time?
+                  <!-- Are you buying {{ data['select-software'] }} for the first time? -->
               </h1>
             </legend>
             <p class="govuk-body">Your business must be purchasing the approved software for the first time. You cannot apply for a software product that you already own or have an active subscription to. Major software upgrades are permitted.</p>
             <p class="govuk-body">If you already have software with a supplier listed on the <a href="https://htg-dev-webapp-app.azurewebsites.net/comparison-tool" target="_blank" class="govuk-link">Help to Grow: Digital website</a> (opens in new tab), you can still apply for other types of software provided by the same supplier.</p>
-            <span style="display:none" id="select-software-purchase" class="govuk-error-message">
+            <!-- <span style="display:none" id="select-software-purchase" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span>Select yes if you are buying {{ data['select-software'] }} for the first time
+            </span> -->
+            <span style="display:none" id="select-software-purchase" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Select yes if you are buying Cashoo for the first time
             </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
