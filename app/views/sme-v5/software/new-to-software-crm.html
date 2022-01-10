@@ -1,7 +1,8 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  Are you buying {{ data['select-software'] }} for the first time?
+  
+  Are you buying Cashoo for the first time?
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,8 +36,11 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">Section 1 of 4</span>
-                  <h1 class="govuk-fieldset__heading">
+                  <!-- <h1 class="govuk-fieldset__heading">
                     Are you buying {{ data['select-software'] }} for the first time?
+                  </h1> -->
+                  <h1 class="govuk-fieldset__heading">
+                    Are you buying Cashoo for the first time?
                   </h1>
                 </legend>
                 <!-- <p class="govuk-body">
@@ -46,8 +50,11 @@
                 <p class="govuk-body">If you already have software with a supplier listed on the <a href="https://htg-dev-webapp-app.azurewebsites.net/comparison-tool" target="_blank" class="govuk-link">Help to Grow: Digital website</a> (opens in new tab), you can still apply for other types of software provided by the same supplier.</p>
 
                 <span style="display:none" id="select-software-purchase" class="govuk-error-message">
-                  <span class="govuk-visually-hidden">Error:</span>Select the {{ data['select-software'] }} software you are interested in.
+                  <span class="govuk-visually-hidden">Error:</span>Select the Cashoo software you are interested in.
                 </span>
+                <!-- <span style="display:none" id="select-software-purchase" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Select the {{ data['select-software'] }} software you are interested in.
+                </span> -->
                 <div class="govuk-radios govuk-radios--inline">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="new-to-software-1" name="new-to-software" type="radio" value="Yes">

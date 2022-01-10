@@ -1,7 +1,8 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  Is this a major software upgrade from a previous version of {{ data['select-software'] }} for your business?
+  
+  Is this a major software upgrade from a previous version of Cashoo for your business?
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,8 +19,11 @@
     </h2>
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
-        <li>
+        <!-- <li>
           <a href="#major-upgrade">Select yes if this is a major software upgrade from a previous version of {{ data['select-software'] }} for your business</a>
+        </li> -->
+        <li>
+          <a href="#major-upgrade">Select yes if this is a major software upgrade from a previous version of Cashoo for your business</a>
         </li>
       </ul>
     </div>
@@ -35,9 +39,11 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <span class="govuk-caption-l">Section 1 of 4</span>
-                <h1 class="govuk-fieldset__heading">
+                <!-- <h1 class="govuk-fieldset__heading">
                   Is this a major software upgrade from a previous version of {{ data['select-software'] }} for your business?
-
+                </h1> -->
+                <h1 class="govuk-fieldset__heading">
+                  Is this a major software upgrade from a previous version of Cashoo for your business?
                 </h1>
               </legend>
 
@@ -49,8 +55,11 @@
               A software purchase which moves between defined product variations from the same supplier - for example, from Bronze to Silver - is not permitted.
               </p>
 
-              <span style="display:none" id="major-upgrade" class="govuk-error-message">
+              <!-- <span style="display:none" id="major-upgrade" class="govuk-error-message">
                 <span class="govuk-visually-hidden">Error:</span>Select yes if this is a major software upgrade from a previous version of {{ data['select-software'] }} for your business
+              </span> -->
+              <span style="display:none" id="major-upgrade" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if this is a major software upgrade from a previous version of Cashoo for your business
               </span>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
