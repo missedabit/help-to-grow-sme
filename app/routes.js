@@ -453,7 +453,7 @@ router.post('/sme-v5/major-upgrade-answer', function (req, res) {
     res.redirect('company/company-size')
   } else {
     // Send user to ineligible page
-    res.redirect('software/add-ons')
+    res.redirect('software/ineligible')
   }
 })
 
