@@ -417,10 +417,10 @@ router.post('/sme-v5/new-software-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (newToSoftware  == "Yes"){
     // Send user to next page
-    res.redirect('company/company-size')
+    res.redirect('software/existing-customer')
   } else {
     // Send user to ineligible page
-    res.redirect('software/existing-customer')
+    res.redirect('software/ineligible-first-time')
   }
 })
 
