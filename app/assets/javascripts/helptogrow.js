@@ -230,14 +230,6 @@ function validateEmail(sEmail) {
       $("#error-summary-title").hide();
       return false;
     }
-    /*else if ($('input:checkbox', this).length == $('input:checked', this).length && !$("input[name='phone-number']").val()){
-          var phone = $("input[name='phone-number']").val().length
-          alert(phone);
-          $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-          $(".govuk-error-summary, #errorphonenumber").show();
-          $("#error-summary-title").hide();
-          return false;
-    } */
 
     else {
           alert('3');
