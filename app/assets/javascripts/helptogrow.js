@@ -224,7 +224,7 @@ function validateEmail(sEmail) {
         }
     } else if ($('input:checkbox', this).length == $('input:checked', this).length && $("input[name='phone-number']").val().length >= 1)
     {
-      alert('2');
+      // alert('2');
       $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
       $(".govuk-error-summary, #errorphonenumber").show();
       $("#error-summary-title").hide();
@@ -232,7 +232,7 @@ function validateEmail(sEmail) {
     }
 
     else {
-          alert('3');
+          // alert('3');
           $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
           $(".govuk-error-summary, #erroremail, #errorphonenumber").hide();
           $("#error-summary-title, .govuk-error-message").show();
