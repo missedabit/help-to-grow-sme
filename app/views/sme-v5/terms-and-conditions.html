@@ -14,8 +14,8 @@
 {% block content %}
 
 
-  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-    <h2 class="govuk-error-summary__title" id="error-summary-title">
+  <div id="error-summary-title" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title">
       There is a problem
     </h2>
     <div class="govuk-error-summary__body">
@@ -23,6 +23,18 @@
         <li>
           <a href="#terms-policy">Select if you have read and accepted the terms and conditions, privacy policy and subsidy control</a>
         </li>
+        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="error-summary-title-sme-details" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
       </ul>
     </div>
   </div>
@@ -49,7 +61,8 @@
               Before you apply for a software discount for <strong>{{ data['select-software'] }}</strong> you will need to read and accept the <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a>, <a href="privacy-policy" class="govuk-link">privacy policy</a> and <a href="subsidy-control">subsidy control</a>. You can also opt-in to receive marketing communications for Help to Grow: Digital.
             </p> -->
             <p>
-              Before you apply for a software discount for <strong>Cashoo</strong> you will need to read and accept the <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a>, <a href="privacy-policy" class="govuk-link">privacy policy</a> and <a href="subsidy-control">subsidy control</a>. You can also opt-in to receive marketing communications for Help to Grow: Digital.
+              Before you apply for a software discount for <strong>Cashoo</strong> you will need to read and accept the <a href="terms-and-conditions-detail" class="govuk-link">terms and conditions</a>, <a href="privacy-policy" class="govuk-link">privacy policy</a> and <a href="subsidy-control">subsidy control</a>.
+              <!--You can also opt-in to receive marketing communications for Help to Grow: Digital.-->
             </p>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
@@ -71,22 +84,60 @@
                   I have read and accept the subsidy control
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
+
+              <p>
+                <br>
+                I consent to the Department for Business, Energy & Industrial Strategy (BEIS) contacting me (including through one or more of the third party recipients identified in the privacy policy) by:<br>
+              </p>
+
+              <!--<div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="terms-policy-4" name="terms-policy_opt" type="checkbox" value="privacyy">
-                <!-- <label class="govuk-label govuk-checkboxes__label" for="terms-policy-4">
+                &lt;!&ndash; <label class="govuk-label govuk-checkboxes__label" for="terms-policy-4">
                   I consent to the Department for Business, Energy & Industrial Strategy (BEIS) processing my personal data for marketing purposes and to keep me informed about news and events relating to Help to Grow: Digital.<br>
                   I understand that I can unsubscribe at any time, including by emailing <a href="mailto:sme.helptogrow@beis.gov.uk" class="govuk-link">sme.helptogrow@beis.gov.uk</a>.<br>
-                </label> -->
+                </label> &ndash;&gt;
                 <label class="govuk-label govuk-checkboxes__label" for="terms-policy-4">
                   I consent to the Department for Business, Energy & Industrial Strategy (BEIS) contacting me by email to keep me informed about news and events relating to Help to Grow: Digital.<br>
                   I am freely consenting to BEIS holding and processing my personal data for marketing communication purposes.<br>
-                  <!-- I understand that I can unsubscribe at any time, including by emailing <a href="mailto:sme.helptogrow@beis.gov.uk" class="govuk-link">sme.helptogrow@beis.gov.uk</a>.<br> -->
+                  &lt;!&ndash; I understand that I can unsubscribe at any time, including by emailing <a href="mailto:sme.helptogrow@beis.gov.uk" class="govuk-link">sme.helptogrow@beis.gov.uk</a>.<br> &ndash;&gt;
                 </label>
-              </div>
+              </div>-->
             </div>
           </fieldset>
-          <!-- <p>I understand that I can can withdraw or change my consent at any time by contacting <a href="mailto:sme.helptogrow@beis.gov.uk" class="govuk-link">sme.helptogrow@beis.gov.uk</a>.<br>
-          I am freely consenting to BEIS holding and processing my personal data for marketing communication purposes.</p> -->
+
+          <fieldset class="govuk-fieldset">
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half" id="phonenumber">
+                <label class="govuk-label" for="phone-number">
+                  Phone number (optional)
+                </label>
+                <p id="errorphonenumber" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>Please enter a phone number
+                </p>
+                <input class="govuk-input" id="phone-number" name="phone-number" type="number">
+              </div>
+            </div>
+
+            <p></p>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half" id="error-work-email">
+                <label class="govuk-label" for="work-email">
+                  Email address (optional)
+                </label>
+                <p id="erroremail" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Please enter a valid email address.(e.g. name@domain.com)
+                </p>
+                <input class="govuk-input" id="work-email" name="work-email" type="text">
+              </div>
+            </div>
+
+          </fieldset>
+           <p><br>To keep me informed about news, updates and events relating to Help to Grow: Digital, and communicate with me about past and current applications for discounts (grant tokens), including offering
+           support in the event of their expiry, and for support with my discount (grant token) applications and redemptions and software purchases</p>
+
+          <p>By filling out and ticking the box(es) above I am freely consenting to BEIS (and/or the third party recipients identified in the privacy policy) holding and processing my personal data for these purposes.</p>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">

@@ -176,7 +176,7 @@ $( document ).ready(function() {
   });
 
 
-  $('.work-email').click(function(e) {
+  $('.email').click(function(e) {
     var sEmail = $("input[name='email']").val();
     if ($.trim(sEmail).length == 0) {
         alert('Please enter valid email address');
@@ -210,11 +210,40 @@ function validateEmail(sEmail) {
 
   // form validation for terms and conditions page
   $('.terms-policy').submit(function() {
-    if ($('input:checkbox', this).length == $('input:checked', this).length ) {
+    var sEmail = $("input[name='work-email']").val();
+
+
+    if ($('input:checkbox', this).length == $('input:checked', this).length && ((validateEmail(sEmail)) || $("input[name='phone-number']").val())){
             // alert("all checkboxes have been checked");
-    } else {
+    } else if ($('input:checkbox', this).length == $('input:checked', this).length && (sEmail).length > 0){
+        if (!validateEmail(sEmail)){
           $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
-          $(".govuk-error-summary, .govuk-error-message").show();
+          $(".govuk-error-summary, #erroremail").show();
+          $("#error-summary-title, #errorphonenumber").hide();
+          return false;
+        }
+    } else if ($('input:checkbox', this).length == $('input:checked', this).length && $("input[name='phone-number']").val().length >= 1)
+    {
+      alert('2');
+      $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+      $(".govuk-error-summary, #errorphonenumber").show();
+      $("#error-summary-title").hide();
+      return false;
+    }
+    /*else if ($('input:checkbox', this).length == $('input:checked', this).length && !$("input[name='phone-number']").val()){
+          var phone = $("input[name='phone-number']").val().length
+          alert(phone);
+          $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+          $(".govuk-error-summary, #errorphonenumber").show();
+          $("#error-summary-title").hide();
+          return false;
+    } */
+
+    else {
+          alert('3');
+          $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+          $(".govuk-error-summary, #erroremail, #errorphonenumber").hide();
+          $("#error-summary-title, .govuk-error-message").show();
           return false;
     }
  });
