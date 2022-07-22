@@ -424,8 +424,42 @@ router.post('/sme-v5/new-software-answer', function (req, res) {
   }
 })
 
+// Version6
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/new-software-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var newToSoftware = req.session.data['new-to-software']
+
+  // Check whether the variable matches a condition
+  if (newToSoftware  == "Yes"){
+    // Send user to next page
+    res.redirect('software/existing-customer')
+  } else {
+    // Send user to ineligible page
+    res.redirect('software/ineligible-first-time')
+  }
+})
+
 // Add your routes here - above the module.exports line
 router.post('/sme-v5/existing-customer-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var existingcustomer = req.session.data['existing-customer']
+
+  // Check whether the variable matches a condition
+  if (existingcustomer  == "Yes"){
+    // Send user to next page
+    res.redirect('software/major-upgrade')
+  } else {
+    // Send user to ineligible page
+    res.redirect('company/company-size')
+  }
+})
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/existing-customer-answer', function (req, res) {
 
   // Make a variable and give it the value from 'new-to-software'
   var existingcustomer = req.session.data['existing-customer']
@@ -443,6 +477,23 @@ router.post('/sme-v5/existing-customer-answer', function (req, res) {
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v5/major-upgrade-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isMajorUpgrade = req.session.data['major-upgrade']
+
+  // Check whether the variable matches a condition
+  if (isMajorUpgrade  == "Yes"){
+    // Send user to next page
+    res.redirect('company/company-size')
+  } else {
+    // Send user to ineligible page
+    res.redirect('software/ineligible')
+  }
+})
+
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/major-upgrade-answer', function (req, res) {
 
   // Make a variable and give it the value from 'new-to-software'
   var isMajorUpgrade = req.session.data['major-upgrade']
@@ -475,6 +526,22 @@ router.post('/sme-v5/add-on-answer', function (req, res) {
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v5/companies-house-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var isCompaniesHouse = req.session.data['company-number']
+
+  // Check whether the variable matches a condition
+  if (isCompaniesHouse  == "Yes"){
+    // Send user to next page
+    res.redirect('company/companies-house-number')
+  } else{
+      // Send user to next page
+      res.redirect('company/financial-conduct-authority-question')
+  }
+})
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/companies-house-answer', function (req, res) {
 
   // Make a variable and give it the value from 'new-to-software'
   var isCompaniesHouse = req.session.data['company-number']
@@ -574,9 +641,60 @@ router.post('/sme-v5/company/check-company-details', function (req, res) {
 
 })
 
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/company/check-company-details', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var companyNumber = req.session.data['companies-house-number']
+  var fcaNumber = req.session.data['fca-number']
+
+  // Check whether the variable matches a condition
+  if (companyNumber  == "11111"){
+    // Send user to next page
+    res.redirect('no-companies-house-number')
+  } else if (companyNumber  == "33333"){
+    // Send user to next page
+    res.redirect('no-companies-house-api')
+  } else if (companyNumber  == "44444"){
+    // Send user to next page
+    res.redirect('company-voucher-already-applied')
+  } else if (fcaNumber  == "666666"){
+    // Send user to next page
+    res.redirect('no-fca-number')
+  } else {
+    // Send user to ineligible page
+    res.redirect('check-company-details')
+  }
+
+})
+
 
 // Add your routes here - above the module.exports line
 router.post('/sme-v5/company/companies-house-question', function (req, res) {
+
+  // Make a variable and give it the value from 'new-to-software'
+  var companySize = req.session.data['companies-size']
+  // var fcaNumber = req.session.data['fca-number']
+
+  // Check whether the variable matches a condition
+  if (companySize  == "1"){
+    // Send user to next page
+    res.redirect('ineligible')
+  } else if (companySize  == "5"){
+    // Send user to next page
+    res.redirect('companies-house-question')
+  } else if (companySize  == "251"){
+    // Send user to next page
+    res.redirect('ineligible')
+  } else {
+    // Send user to ineligible page
+    res.redirect('companies-house-question')
+  }
+
+})
+
+// Add your routes here - above the module.exports line
+router.post('/sme-v6/company/companies-house-question', function (req, res) {
 
   // Make a variable and give it the value from 'new-to-software'
   var companySize = req.session.data['companies-size']

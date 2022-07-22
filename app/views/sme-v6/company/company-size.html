@@ -1,0 +1,61 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  How many employees does the business have?
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="javascript:history.go(-1)">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#company-size">Enter the number of employees</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/sme-v6/company/companies-house-question" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-l">Section 2 of 4</span>
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-size">
+              How many employees does the business have?
+            </label>
+          </h1>
+
+          <p class="govuk-body">To be eligible for the scheme the business must have between 5 and 249 employees.</p>
+
+              <label class="govuk-label" for="number-of-employees">Number of employees</label>
+              <span style="display:none" id="company-size" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Enter the number of employees</span>
+              <input class="govuk-input govuk-input--width-5" id="companies-size" name="companies-size" type="text" maxlength="8" pattern="[0-9]*" inputmode="numeric" aria-describedby="co-number-hint">
+
+
+        </div>
+
+        <!-- <button class="govuk-button company-house" data-module="govuk-button">Continue</button> -->
+
+        <button class="govuk-button company-size" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

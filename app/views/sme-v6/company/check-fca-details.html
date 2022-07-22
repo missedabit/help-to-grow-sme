@@ -1,0 +1,98 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+Check your Financial Conduct Authority Mutuals Public Register details
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="financial-conduct-authority-number">Back</a></p>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form action="../applicant/name" method="post" novalidate>
+
+            <span class="govuk-caption-l">Section 2 of 4</span>
+            <h1 class="govuk-heading-l">Check your Financial Conduct Authority Mutuals Public Register details</h1>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Registration name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Thyme hand lotion
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a href="#">
+
+                            <span class="govuk-visually-hidden"> registration name</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Mutuals Public Register number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        {{ data['fca-number'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a href="financial-conduct-authority-number">
+                            Change
+                            <span class="govuk-visually-hidden"> register number</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Registered office
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        72 Guild Street<br>
+                        London<br>
+                        SE23 6FH
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a href="directors-dob">
+
+                            <span class="govuk-visually-hidden"> licence period</span>
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Continue only if this is your mutual society or credit union, or the mutual society or credit union you work for, and you would like to apply to the Help to Grow: Digital business software scheme.
+                </strong>
+            </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Confirm and continue
+            </button>
+
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+{% endblock %}

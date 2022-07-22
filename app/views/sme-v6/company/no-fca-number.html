@@ -1,0 +1,35 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+The Financial Conduct Authority Mutuals Public Register number could not be found
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-number">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">The Financial Conduct Authority Mutuals Public Register number could not be found</h1>
+
+        <p class="govuk-body">Check you have entered the correct registration number for your mutual society.</p>
+        <p class="govuk-body">To find your mutual society registration number you can <a href="https://mutuals.fca.org.uk/" target="_blank" class="govuk-link">search the Financial Conduct Authority Mutuals Public Register (opens in new tab)</a>.</p>
+
+        <p class="govuk-body">Then <a href="https://help-to-grow-sme.herokuapp.com/sme-v5/company/financial-conduct-authority-number" class="govuk-link">re-enter your mutual society registration number</a>.</p>
+
+        <div class="govuk-inset-text">
+        <p class="govuk-body">If the registration number for your mutual society can not be found in the Financial Conduct Authority Mutuals Public Register, you will <strong>not</strong> be able to continue with your application.</p>
+        </div>
+
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

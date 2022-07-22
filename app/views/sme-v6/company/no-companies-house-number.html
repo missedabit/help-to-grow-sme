@@ -1,0 +1,50 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  The Companies House number could not be found
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="companies-house-number">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="check-company-details" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="companies-house-number">
+                The Companies House number could not be found
+              </label>
+            </h1>
+
+          <p class="govuk-body">Check that you have entered the correct Companies House number. You can find this:</p>
+          <!-- <p class="govuk-body">You can:</p> -->
+          <ul class="govuk-list govuk-list--bullet">
+            <li>on the certificate of incorporation</li>
+            <li>by searching the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" class="govuk-link">Companies House register (opens in new tab)</a> for the company number</li>
+          </ul>
+
+          <p class="govuk-body">When you have found the Companies House number, please <a href="companies-house-number" class="govuk-link">re-enter it</a> to continue with your application.</p>
+
+          <div class="govuk-inset-text">
+          <p class="govuk-body">If the Companies House number can not be found in the register, you will <strong>not</strong> be able to continue with your application.</p>
+          </div>
+
+          </div>
+
+<!--          <button class="govuk-button company-house-number" data-module="govuk-button">Continue</button>-->
+
+        </form>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}

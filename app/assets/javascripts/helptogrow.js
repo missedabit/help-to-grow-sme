@@ -176,7 +176,7 @@ $( document ).ready(function() {
   });
 
 
-  $('.email').click(function(e) {
+  $('.work-email').click(function(e) {
     var sEmail = $("input[name='email']").val();
     if ($.trim(sEmail).length == 0) {
         alert('Please enter valid email address');
@@ -208,21 +208,28 @@ function validateEmail(sEmail) {
 
 
 
-  // form validation for terms and conditions page
-  $('.terms-policy').submit(function() {
-    var sEmail = $("input[name='work-email']").val();
+// form validation for terms and conditions page
+  $('.terms-policy-update').submit(function () {
+    var sEmail = $("input[name='work-email']").val()
 
-
-
-    if ($('input:checkbox', this).length !== $('input:checked', this).length){
-      // alert('1')
+    if ($('input:checkbox', this).length !== $('input:checked', this).length) {
+      alert('0')
       if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length >= 2)) {
+        alert('error1')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
-        $('.govuk-error-summary, #terms-policy, #erroremail').show()
+        $('.govuk-error-summary, #terms-policy').show()
+        $('#error-summary-title-sme-details, #errorphonenumber, #erroremail').hide()
+      }
+
+      if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length === 0)) {
+        alert('error2')
+        $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
+        $('.govuk-error-summary, #terms-policy, #erroremail, #errorphonenumber').show()
         $('#error-summary-title-sme-details').hide()
       }
 
       if (validateEmail(sEmail) && ($("input[name='phone-number']").val().length >= 2)) {
+        alert('error3')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
         $('.govuk-error-summary, #terms-policy').show()
         $('#error-summary-title-sme-details').hide()
@@ -230,25 +237,28 @@ function validateEmail(sEmail) {
       return false
     }
 
-    // if ($('input:checkbox', this).length === $('input:checked', this).length && ((validateEmail(sEmail)) || $("input[name='phone-number']").val())){
     if ($('input:checkbox', this).length === $('input:checked', this).length) {
-      // alert('all checkboxes have been checked');
 
-      //  check for invalid email and empty phone number
       if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length === 0)) {
+        alert('error4')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
-        $('.govuk-error-summary, #erroremail, #errorphonenumber').show()
-        $('#error-summary-title, #terms-policy').hide()
+        $('#error-summary-title-sme-details, #erroremail, #errorphonenumber').show()
+        $('#error-summary-title').hide()
         return false
       }
+    }
 
-      //  check for invalid email and empty phone number
-      if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length >= 2)) {
-        $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
-        $('.govuk-error-summary, #erroremail').show()
-        $('#error-summary-title, #terms-policy, #errorphonenumber').hide()
-        return false
-      }
+  });
+
+
+  // form validation for terms and conditions page
+  $('.terms-policy').submit(function() {
+    if ($('input:checkbox', this).length == $('input:checked', this).length ) {
+            // alert("all checkboxes have been checked");
+    } else {
+          $("div").closest(".govuk-form-group").addClass("govuk-form-group--error");
+          $(".govuk-error-summary, .govuk-error-message").show();
+          return false;
     }
  });
 
