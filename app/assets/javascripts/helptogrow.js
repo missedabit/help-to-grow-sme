@@ -213,23 +213,23 @@ function validateEmail(sEmail) {
     var sEmail = $("input[name='work-email']").val()
 
     if ($('input:checkbox', this).length !== $('input:checked', this).length) {
-      alert('0')
+      // alert('0')
       if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length >= 2)) {
-        alert('error1')
+        // alert('error1')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
         $('.govuk-error-summary, #terms-policy').show()
         $('#error-summary-title-sme-details, #errorphonenumber, #erroremail').hide()
       }
 
       if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length === 0)) {
-        alert('error2')
+        // alert('error2')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
         $('.govuk-error-summary, #terms-policy, #erroremail, #errorphonenumber').show()
         $('#error-summary-title-sme-details').hide()
       }
 
       if (validateEmail(sEmail) && ($("input[name='phone-number']").val().length >= 2)) {
-        alert('error3')
+        // alert('error3')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
         $('.govuk-error-summary, #terms-policy').show()
         $('#error-summary-title-sme-details').hide()
@@ -240,7 +240,7 @@ function validateEmail(sEmail) {
     if ($('input:checkbox', this).length === $('input:checked', this).length) {
 
       if (!validateEmail(sEmail) && ($("input[name='phone-number']").val().length === 0)) {
-        alert('error4')
+        // alert('error4')
         $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
         $('#error-summary-title-sme-details, #erroremail, #errorphonenumber').show()
         $('#error-summary-title').hide()
