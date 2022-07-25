@@ -266,18 +266,28 @@ function validateEmail(sEmail) {
 
   $('.terms-policy-update1').submit(function () {
 
-    if ($('input:checkbox', this).length !== $('input:checked', this).length) {
-      $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
-      $('#error-summary-title').show()
+    if ($('input[name=terms-policy]:checked').length !== 3) {
+      alert('policy')
+      return false
     }
 
-    if ($('input[name=optional]:checked').length === 0) {
+    /*else if ($('input[name=optional]:checked').length === 0) {
       alert('email')
-    }
+      return false
+    }*/
 
-    return false
   })
 
+  /*$('.marketing').submit(function () {
+
+    if ($('input[name=terms-policy]:checked').length !== 3) {
+      alert('policy')
+    } else if ($('input[name=optional]:checked').length === 0) {
+      alert('email')
+      return false
+    }
+
+  })*/
 
 
   // form validation for terms and conditions page

@@ -1,0 +1,115 @@
+{% extends "layout_sme.html" %}
+
+{% block pageTitle %}
+  Marketing options
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "includes/phasebanner.html" %}
+<img src="/public/images/HTG_logo_960x188.svg" alt="Help to Grow Logo" class="beis-htg-logo">
+<p><a class="govuk-back-link  govuk-!-margin-top-0 govuk-!-margin-bottom-0" href="applicant/work-email">Back</a></p>
+{% endblock %}
+
+{% block content %}
+
+
+  <div id="error-summary-title" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#terms-policy">Select if you have read and accepted the terms and conditions, privacy policy and subsidy control</a>
+        </li>
+        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="error-summary-title-sme-details" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<!--      <form class="terms-policy-update" action="applicant/check-your-answers" method="get">-->
+      <form action="applicant/check-your-answers" method="get">
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-l">Section 3 of 4</span>
+              <h1 class="govuk-fieldset__heading">
+                Marketing options
+              </h1>
+            </legend>
+            <span style="display:none" id="terms-policy" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>Select if you have read and accepted the terms and conditions, privacy policy and subsidy control
+            </span>
+
+            <p>
+              I consent to the Department for Business, Energy & Industrial Strategy (BEIS) contacting me (including through one or more of the third party recipients identified in the privacy policy) by:<br>
+            </p>
+          </fieldset>
+
+          <fieldset class="govuk-fieldset">
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="optional-phone" name="optional" type="checkbox" value="optional-phone">
+              <label class="govuk-label govuk-checkboxes__label" for="optional-phone">
+                Phone number (optional)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="optional-email" name="optional" type="checkbox" value="optional-email">
+              <label class="govuk-label govuk-checkboxes__label" for="optional-email">
+                Email (optional)
+              </label>
+            </div>
+
+
+          </fieldset>
+           <p><br>To keep me informed about news, updates and events relating to Help to Grow: Digital, and communicate with me about past and current applications for discounts (grant tokens), including offering
+           support in the event of their expiry, and for support with my discount (grant token) applications and redemptions and software purchases</p>
+
+          <p>By filling out and ticking the box(es) above I am freely consenting to BEIS (and/or the third party recipients identified in the privacy policy) holding and processing my personal data for these purposes.</p>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Accept
+        </button>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+{% endblock %}
