@@ -267,7 +267,8 @@ function validateEmail(sEmail) {
   $('.terms-policy-update1').submit(function () {
 
     if ($('input[name=terms-policy]:checked').length !== 3) {
-      alert('policy')
+      $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
+      $('.govuk-error-summary, .govuk-error-message').show()
       return false
     }
 
