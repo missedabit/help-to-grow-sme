@@ -179,7 +179,7 @@ $( document ).ready(function() {
   $('.work-email').click(function(e) {
     var sEmail = $("input[name='email']").val();
     if ($.trim(sEmail).length == 0) {
-        alert('Please enter valid email address');
+        // alert('Please enter valid email address');
         $("input:text").val("Not an email address");
         e.preventDefault();
     }
@@ -193,6 +193,17 @@ $( document ).ready(function() {
         e.preventDefault();
     }
 });
+
+  $('.phone-number').click(function(e) {
+    if ($('input[name=\'phone\']').val().length !== 0) {
+
+    } else {
+      $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
+      $('.govuk-error-summary, .govuk-error-message').show()
+      $('input:text').val('Enter your phone number')
+      e.preventDefault()
+    }
+  })
 
 
 
@@ -249,6 +260,24 @@ function validateEmail(sEmail) {
     }
 
   });
+
+
+
+
+  $('.terms-policy-update1').submit(function () {
+
+    if ($('input:checkbox', this).length !== $('input:checked', this).length) {
+      $('div').closest('.govuk-form-group').addClass('govuk-form-group--error')
+      $('#error-summary-title').show()
+    }
+
+    if ($('input[name=optional]:checked').length === 0) {
+      alert('email')
+    }
+
+    return false
+  })
+
 
 
   // form validation for terms and conditions page

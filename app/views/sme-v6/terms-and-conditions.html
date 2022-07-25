@@ -43,7 +43,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="terms-policy-update" action="applicant/check-your-answers" method="get">
+<!--      <form class="terms-policy-update" action="applicant/check-your-answers" method="get">-->
+      <form class="terms-policy-update1" action="applicant/check-your-answers" method="get">
 
         <div class="govuk-form-group">
 
@@ -95,7 +96,21 @@
 
           <fieldset class="govuk-fieldset">
 
-            <div class="govuk-grid-row">
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="optional-phone" name="optional" type="checkbox" value="optional-phone">
+              <label class="govuk-label govuk-checkboxes__label" for="optional-phone">
+                Phone number (optional)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="optional-email" name="optional" type="checkbox" value="optional-email">
+              <label class="govuk-label govuk-checkboxes__label" for="optional-email">
+                Email (optional)
+              </label>
+            </div>
+
+            <!--<div class="govuk-grid-row">
               <div class="govuk-grid-column-one-half" id="phonenumber">
                 <label class="govuk-label" for="phone-number">
                   Phone number (optional)
@@ -119,7 +134,7 @@
                 </p>
                 <input class="govuk-input" id="work-email" name="work-email" type="text">
               </div>
-            </div>
+            </div>-->
 
           </fieldset>
            <p><br>To keep me informed about news, updates and events relating to Help to Grow: Digital, and communicate with me about past and current applications for discounts (grant tokens), including offering

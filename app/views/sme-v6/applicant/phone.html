@@ -1,7 +1,7 @@
 {% extends "layout_sme.html" %}
 
 {% block pageTitle %}
-  What is your work email address?
+  What is your phone number?
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#work-email">Enter your work email address</a>
+        <a href="#phone-number">Enter your phone number</a>
       </li>
     </ul>
   </div>
@@ -29,25 +29,24 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<!--      <form class="form" action="../terms-and-conditions" method="post">-->
-      <form class="form" action="phone" method="post">
+      <form class="form" action="../terms-and-conditions" method="post">
 
         <div class="govuk-form-group">
           <span class="govuk-caption-l">Section 3 of 4</span>
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="email">
-            What is your work email address?
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="phone">
+            What is your phone number?
           </label></h1>
 
-          <p class="govuk-body">If your application is successful, we will send your software discount link to this address.</p>
-          <div id="email-hint" class="govuk-hint">Work email address</div>
-          <span style="display:none" id="work-email" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span>Enter an email address in the correct format, like name@example.com
+<!--          <p class="govuk-body">If your application is successful, we will send your software discount link to this address.</p>-->
+          <div id="email-hint" class="govuk-hint">Phone number</div>
+          <span style="display:none" id="phone-number" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>Enter your phone number
           </span>
-          <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          <input class="govuk-input govuk-!-width-three-quarters" id="phone" name="phone" type="number" spellcheck="false" aria-describedby="email-hint">
 
         </div>
 
-        <button class="govuk-button work-email" data-module="govuk-button">Continue</button>
+        <button class="govuk-button phone-number" data-module="govuk-button">Continue</button>
 
       </form>
 
