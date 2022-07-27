@@ -13,33 +13,6 @@
 
 {% block content %}
 
-
-  <div id="error-summary-title" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-    <h2 class="govuk-error-summary__title">
-      There is a problem
-    </h2>
-    <div class="govuk-error-summary__body">
-      <ul class="govuk-list govuk-error-summary__list">
-        <li>
-          <a href="#terms-policy">Select if you have read and accepted the terms and conditions, privacy policy and subsidy control</a>
-        </li>
-        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="error-summary-title-sme-details" style="display:none" class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-    <h2 class="govuk-error-summary__title">
-      There is a problem
-    </h2>
-    <div class="govuk-error-summary__body">
-      <ul class="govuk-list govuk-error-summary__list">
-        <li><a href="#errorphonenumber">You must add either your phone number or email address to submit this form</a></li>
-      </ul>
-    </div>
-  </div>
-
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -48,11 +21,11 @@
 
         <div class="govuk-form-group">
 
-          <fieldset class="govuk-fieldset">
+          <div class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-l">Section 3 of 4</span>
               <h1 class="govuk-fieldset__heading">
-                Marketing options
+                Would you like to receive marketing information?
               </h1>
             </legend>
             <span style="display:none" id="terms-policy" class="govuk-error-message">
@@ -60,13 +33,25 @@
             </span>
 
             <p>
-              I consent to the Department for Business, Energy & Industrial Strategy (BEIS) contacting me (including through one or more of the third party recipients identified in the privacy policy) by:<br>
+              From time to time the Department for Business, Energy & Industrial Strategy (BEIS) may contact you to:<br>
             </p>
-          </fieldset>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>keep you informed about news,updates and events relating to Help to Grow: Digital</li>
+              <li>communicate with you about past and current applications for discounts, including the offer of support once a discount expires</li>
+              <li>offer you support with your discount applications & redemptions, and software purchases</li>
+            </ul>
+
+
+           <p>Choose how you would like to receive this information. If you do not want to receive updates, select 'Continue'.</p>
+
+          <p>By selecting 'phone number' or 'email' you are consenting to the Department of Business, Energy and Industrial Strategy (BEIS) holding,
+           processing and using your personal data to contact you (including through 1 or more of the third parties identified in the privacy policy).</p>
+
+          </div>
+
 
           <fieldset class="govuk-fieldset">
-
-
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="optional-phone" name="optional" type="checkbox" value="optional-phone">
               <label class="govuk-label govuk-checkboxes__label" for="optional-phone">
@@ -79,13 +64,8 @@
                 Email (optional)
               </label>
             </div>
-
-
           </fieldset>
-           <p><br>To keep me informed about news, updates and events relating to Help to Grow: Digital, and communicate with me about past and current applications for discounts (grant tokens), including offering
-           support in the event of their expiry, and for support with my discount (grant token) applications and redemptions and software purchases</p>
 
-          <p>By filling out and ticking the box(es) above I am freely consenting to BEIS (and/or the third party recipients identified in the privacy policy) holding and processing my personal data for these purposes.</p>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">
